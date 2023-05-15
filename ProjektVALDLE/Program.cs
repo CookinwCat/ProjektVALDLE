@@ -399,21 +399,21 @@ if (gamemode == "Agenty")
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("GG!");
             Thread.Sleep(1000);
-            Console.WriteLine("1)Menu\n2)exit");
-            choice2 = Console.ReadLine();
-            if (choice2 == "1")
+            choice = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Chceš hádat agenty nebo abilitky?")
+                    .PageSize(10)
+                    .HighlightStyle(highlightColor)
+                    .AddChoices(new[] {
+           "Menu", "Exit"
+                    }));
+            if (choice == "Menu")
             {
-                Console.Clear();
                 goto Menu;
             }
-            else if (choice2 == "2")
+            else if(choice == "Exit")
             {
-                Console.Clear();
                 goto exit;
-            }
-            else
-            {
-                Console.WriteLine("?;-;");
             }
         }
         else
