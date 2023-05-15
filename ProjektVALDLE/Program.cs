@@ -1,61 +1,52 @@
 ﻿//Streak momentálně nicht worken
-//Abilitky jsou jen kousek v poli jinak nic
-//Agenti hotovy a funkcni PeepoHappy
-//U všech agentu je porad pickrate jsem moc linej to dat pryc rn :c
+//Abilitky jsou jen v poli 
+using Spectre.Console;
+
 string releaseDate = "";
 string role = "";
-double pickRate = 0.1;
 string Narodnost = "";
 string GreleaseDate = "";
 string Grole = "";
-double GpickRate = 0.1;
 string GNarodnost = "";
 string gender = "";
 string Ggender = "";
-int menu = 0;
 string choice;
 int Streak = 0;
 string choice2;
-int guess = 0;
 int nahodnyindex = 0;
 string gamemode = "";
+string AbilityType = "";
+string AbilityBtn = "";
+string hadanaAbilita = "";
+string odhadAbility = "";
 
-string[] agents = { "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
+string[] agents = {"Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
     "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
     "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra"};
-string[] abilities = { "Incendiary", "Sky smoke", "Stim beacon", "Orbital strike", "Curveball", "Hot hands", "Blaze", "Run it back", "Slow orb", "Healing orb",
+string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike", "Curveball", "Hot hands", "Blaze", "Run it back", "Slow orb", "Healing orb",
     "Barrier orb", "Resurrection", "Shock bolt", "Recon bolt", "Owl drone", "Hunter´s fury", "Poison cloud", "Toxic screen", "Snake bite", "Viper´s pit",
  "Cyber cage", "Spycam", "Trapwire", "Neural theft", "Devour", "Dismiss", "Leer", "Empress", 
-"Alarmbot", "Turret", "Nanoswarm", "Lockdown", "Flashpoint", "Fault line","Aftershock", "Rolling thunder"};
-Console.ForegroundColor = ConsoleColor.Red;
+"Alarmbot", "Turret", "Nanoswarm", "Lockdown", "Flashpoint", "Fault line","Aftershock", "Rolling thunder", "Paranoia", "Dark cover", "Shrouded step", "From the shadows","Updraft",
+    "Dash", "Cloudburst", "Blade storm", "Blast pack", "Paint shells", "Boombot", "Showstopper", "Trailblazer", "Guiding light", "Regrowth", "Seekers", "Blindside", "Gatecrash",
+    "Fakeout", "Dimensional drift", "Nova pulse", "Nebula", "Gravity well", "Cosmic divide", "Flash/Drive", "Zero/Point", "Frag/Ment", "Null/Cmd", "Headhunter", "Rendezvous",
+    "Trademark", "Tour De Force", "Relay bolt", "High gear", "Fast lane", "Overdrive", "Seize", "Haunt", "Prowler", "Nightfall", "Cove", "High tide", "Cascade", "Reckoning",
+    "Wingman", "Dizzy", "Moshpit", "Thrash"};
+Console.ForegroundColor = Color.Red1;
 Console.WriteLine("VALDLE!");
 Console.ForegroundColor= ConsoleColor.White;
 
 Menu:
+var highlightColor = new Style().Foreground(Color.Red1);
+gamemode = AnsiConsole.Prompt(
+    new SelectionPrompt<string>()
+        .Title("Chceš hádat agenty nebo abilitky?")
+        .PageSize(10)
+        .HighlightStyle(highlightColor)
+        .AddChoices(new[] {
+           "Agenty", "Abilitky"
+        }));
 
-while (menu == 0)
-{
-    Console.WriteLine("1) Start\n2) Momentální streak\n3) EXIT");
-    choice = Console.ReadLine();
-    if (choice == "1")
-    {
-        Console.WriteLine("Chceš hádat agenty(1) nebo abilitky(2)?");
-       gamemode = Console.ReadLine();
-        menu++;
-    }
-    else if (choice == "2")
-    {
-        Console.WriteLine($"Momentální streak je {Streak}.");
-        Thread.Sleep(5000);
-        Console.ReadKey();
-    }
-    else if (choice == "3")
-    {
-        goto exit;
-    }
-}
-menu = 0;
-if (gamemode == "1")
+if (gamemode == "Agenty")
 {
     Random generatorCisel = new Random();
     nahodnyindex = generatorCisel.Next(agents.Length);
@@ -65,7 +56,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Duelist";
-        pickRate = 10;
         Narodnost = "Jižní Korea";
         gender = "žena";
     }
@@ -73,7 +63,6 @@ if (gamemode == "1")
     {
         releaseDate = "1.0";
         role = "Duelist";
-        pickRate = 6.5;
         Narodnost = "Brazílie";
         gender = "žena";
     }
@@ -81,7 +70,6 @@ if (gamemode == "1")
     {
         releaseDate = "1.0";
         role = "Duelist";
-        pickRate = 11.8;
         Narodnost = "Mexico";
         gender = "žena";
     }
@@ -89,7 +77,6 @@ if (gamemode == "1")
     {
         releaseDate = "4.0";
         role = "Duelist";
-        pickRate = 2.2;
         Narodnost = "Filipíny";
         gender = "žena";
     }
@@ -97,7 +84,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Duelist";
-        pickRate = 3.4;
         Narodnost = "Británie";
         gender = "muž";
     }
@@ -105,7 +91,6 @@ if (gamemode == "1")
     {
         releaseDate = "2.0";
         role = "Duelist";
-        pickRate = 1.8;
         Narodnost = "Japonsko";
         gender = "muž";
     }
@@ -113,7 +98,6 @@ if (gamemode == "1")
     {
         releaseDate = "6.04";
         role = "Initiator";
-        pickRate = 6.2;
         Narodnost = "USA";
         gender = "muž";
     }
@@ -121,7 +105,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Initiator";
-        pickRate = 4.2;
         Narodnost = "Rusko";
         gender = "muž";
     }
@@ -129,7 +112,6 @@ if (gamemode == "1")
     {
         releaseDate = "4.08";
         role = "Initiator";
-        pickRate = 3.2;
         Narodnost = "Turecko";
         gender = "žena";
     }
@@ -137,7 +119,6 @@ if (gamemode == "1")
     {
         releaseDate = "3.0";
         role = "Initiator";
-        pickRate = 2.7;
         Narodnost = "Alternative Earth";
         gender = "muž";
     }
@@ -145,7 +126,6 @@ if (gamemode == "1")
     {
         releaseDate = "1.11";
         role = "Initiator";
-        pickRate = 3.3;
         Narodnost = "Austrálie";
         gender = "žena";
     }
@@ -153,7 +133,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Initiator";
-        pickRate = 2.6;
         Narodnost = "Švédsko";
         gender = "muž";
     }
@@ -161,7 +140,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Sentinel";
-        pickRate = 3.3;
         Narodnost = "Maroko";
         gender = "muž";
     }
@@ -169,7 +147,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Sentinel";
-        pickRate = 10.7;
         Narodnost = "Čína";
         gender = "žena";
     }
@@ -177,7 +154,6 @@ if (gamemode == "1")
     {
         releaseDate = "1.05";
         role = "Sentinel";
-        pickRate = 6.5;
         Narodnost = "Německo";
         gender = "žena";
     }
@@ -185,7 +161,6 @@ if (gamemode == "1")
     {
         releaseDate = "3.10";
         role = "Sentinel";
-        pickRate = 2.8;
         Narodnost = "Francie";
         gender = "muž";
     }
@@ -193,7 +168,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Controller";
-        pickRate = 7.3;
         Narodnost = "Unknown";
         gender = "muž";
     }
@@ -201,7 +175,6 @@ if (gamemode == "1")
     {
         releaseDate = "Beta";
         role = "Controller";
-        pickRate = 3.8;
         Narodnost = "USA";
         gender = "žena";
     }
@@ -209,14 +182,13 @@ if (gamemode == "1")
     {
         releaseDate = "5.08";
         role = "Controller";
-        pickRate = 1.1;
         Narodnost = "Indie";
+        gender = "muž";
     }
     else if (hadanyAgent == "Brimstone")
     {
         releaseDate = "Beta";
         role = "Controller";
-        pickRate = 5;
         Narodnost = "USA";
         gender = "muž";
     }
@@ -224,7 +196,6 @@ if (gamemode == "1")
     {
         releaseDate = "2.04";
         role = "Controller";
-        pickRate = 1.5;
         Narodnost = "Ghana";
         gender = "žena";
     }
@@ -237,7 +208,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Duelist";
-            GpickRate = 10;
             GNarodnost = "Jižní Korea";
             Ggender = "žena";
         }
@@ -245,7 +215,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "1.0";
             Grole = "Duelist";
-            GpickRate = 6.5;
             GNarodnost = "Brazílie";
             Ggender = "žena";
         }
@@ -253,7 +222,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "1.0";
             Grole = "Duelist";
-            GpickRate = 11.8;
             GNarodnost = "Mexico";
             Ggender = "žena";
         }
@@ -261,7 +229,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "4.0";
             Grole = "Duelist";
-            GpickRate = 2.2;
             GNarodnost = "Filipíny";
             Ggender = "žena";
         }
@@ -269,7 +236,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Duelist";
-            GpickRate = 3.4;
             GNarodnost = "Británie";
             Ggender = "muž";
         }
@@ -277,7 +243,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "2.0";
             Grole = "Duelist";
-            GpickRate = 1.8;
             GNarodnost = "Japonsko";
             Ggender = "muž";
         }
@@ -285,7 +250,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "6.04";
             Grole = "Initiator";
-            GpickRate = 6.2;
             GNarodnost = "USA";
             Ggender = "muž";
         }
@@ -293,7 +257,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Initiator";
-            GpickRate = 4.2;
             GNarodnost = "Rusko";
             Ggender = "muž";
         }
@@ -301,7 +264,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "4.08";
             Grole = "Initiator";
-            GpickRate = 3.2;
             GNarodnost = "Turecko";
             Ggender = "žena";
         }
@@ -309,7 +271,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "3.0";
             Grole = "Initiator";
-            GpickRate = 2.7;
             GNarodnost = "Alternative Earth";
             Ggender = "muž";
         }
@@ -317,7 +278,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "1.11";
             Grole = "Initiator";
-            GpickRate = 3.3;
             GNarodnost = "Austrálie";
             Ggender = "žena";
         }
@@ -325,7 +285,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Initiator";
-            GpickRate = 2.6;
             GNarodnost = "Švédsko";
             Ggender = "muž";
         }
@@ -333,7 +292,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Sentinel";
-            GpickRate = 3.3;
             GNarodnost = "Maroko";
             Ggender = "muž";
         }
@@ -341,7 +299,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Sentinel";
-            GpickRate = 10.7;
             GNarodnost = "Čína";
             Ggender = "žena";
         }
@@ -349,7 +306,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "1.05";
             Grole = "Sentinel";
-            GpickRate = 6.5;
             GNarodnost = "Německo";
             Ggender = "žena";
         }
@@ -357,7 +313,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "3.10";
             Grole = "Sentinel";
-            GpickRate = 2.8;
             GNarodnost = "Francie";
             Ggender = "muž";
         }
@@ -365,7 +320,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Controller";
-            GpickRate = 7.3;
             GNarodnost = "Unknown";
             Ggender = "muž";
         }
@@ -373,7 +327,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Controller";
-            GpickRate = 3.8;
             GNarodnost = "USA";
             Ggender = "žena";
         }
@@ -381,7 +334,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "5.08";
             Grole = "Controller";
-            GpickRate = 1.1;
             GNarodnost = "Indie";
             Ggender = "muž";
         }
@@ -389,7 +341,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "Beta";
             Grole = "Controller";
-            GpickRate = 5;
             GNarodnost = "USA";
             Ggender = "muž";
         }
@@ -397,7 +348,6 @@ if (gamemode == "1")
         {
             GreleaseDate = "2.04";
             Grole = "Controller";
-            GpickRate = 1.5;
             GNarodnost = "Ghana";
             Ggender = "žena";
         }
@@ -517,10 +467,130 @@ if (gamemode == "1")
         }
     }
 }
-else if(gamemode == "2")
+else if(gamemode == "Abilitky")
 {
     Random generatorCisel = new Random();
     nahodnyindex = generatorCisel.Next(abilities.Length);
+    if (hadanaAbilita == "Incendiary")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Sky smoke")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Stim beacon")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Orbital strike")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Curveball")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Hot hands")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Blaze")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Run it back")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Slow orb")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Healing orb")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Barrier orb")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Resurrection")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Shock bolt")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Recon bolt")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Owl drone")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Hunter´s fury")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Poison cloud")
+    {
+        AbilityType = "Smoke/Vision blocl";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Toxic screen")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Snake bite")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Viper´s pit")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Cyber cage")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Spycam")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Trapwire")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Neural theft")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "X";
+    }
 }
 exit:
 Console.WriteLine("To bylo moc ez.... Myslim že je čas nerfnout Chambera.");
