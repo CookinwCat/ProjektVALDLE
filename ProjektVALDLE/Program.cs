@@ -895,6 +895,7 @@ else if(gamemode == "Abilitky")
     }
     while(true)
     {
+        odhadAbility = Console.ReadLine();
         if (odhadAbility == "Incendiary")
         {
             GAbilityType = "Molly/Dmg dealing";
@@ -1315,7 +1316,6 @@ else if(gamemode == "Abilitky")
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
         }
-        odhadAbility = Console.ReadLine();
         if (odhadAbility == hadanaAbilita)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -1330,10 +1330,38 @@ else if(gamemode == "Abilitky")
             .AddChoices(new[] {
            "Menu", "Exit"
             }));
+            if(choice == "Menu")
+            {
+                goto Menu;
+            }
+            else
+            {
+                goto exit;
+            }
         }
         else
         {
-            Console.WriteLine("nn");
+            if(AbilityType == GAbilityType)
+            {
+                Console.ForegroundColor= ConsoleColor.Green;
+                Console.WriteLine($"Ability type: {GAbilityType}");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Ability type: {GAbilityType}");
+            }
+            if(AbilityBtn == GAbilityBtn)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Ability button: {GAbilityBtn}");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Ability button: {GAbilityBtn}");
+
+            }
         }
     }
 }
