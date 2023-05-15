@@ -19,6 +19,8 @@ string AbilityType = "";
 string AbilityBtn = "";
 string hadanaAbilita = "";
 string odhadAbility = "";
+string GAbilityType = "";
+string GAbilityBtn = "";
 
 string[] agents = {"Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
     "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
@@ -29,7 +31,7 @@ string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike"
 "Alarmbot", "Turret", "Nanoswarm", "Lockdown", "Flashpoint", "Fault line","Aftershock", "Rolling thunder", "Paranoia", "Dark cover", "Shrouded step", "From the shadows","Updraft",
     "Dash", "Cloudburst", "Blade storm", "Blast pack", "Paint shells", "Boombot", "Showstopper", "Trailblazer", "Guiding light", "Regrowth", "Seekers", "Blindside", "Gatecrash",
     "Fakeout", "Dimensional drift", "Nova pulse", "Nebula", "Gravity well", "Cosmic divide", "Flash/Drive", "Zero/Point", "Frag/Ment", "Null/Cmd", "Headhunter", "Rendezvous",
-    "Trademark", "Tour De Force", "Relay bolt", "High gear", "Fast lane", "Overdrive", "Seize", "Haunt", "Prowler", "Nightfall", "Cove", "High tide", "Cascade", "Reckoning",
+    "Trademark", "Tour de force", "Relay bolt", "High gear", "Fast lane", "Overdrive", "Seize", "Haunt", "Prowler", "Nightfall", "Cove", "High tide", "Cascade", "Reckoning",
     "Wingman", "Dizzy", "Moshpit", "Thrash"};
 Console.ForegroundColor = Color.Red1;
 Console.WriteLine("VALDLE!");
@@ -397,11 +399,10 @@ if (gamemode == "Agenty")
                 Console.WriteLine($"Pohlaví {Ggender}");
             }
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("GG!");
             Thread.Sleep(1000);
             choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("Chceš hádat agenty nebo abilitky?")
+                    .Title("GG!")
                     .PageSize(10)
                     .HighlightStyle(highlightColor)
                     .AddChoices(new[] {
@@ -471,6 +472,7 @@ else if(gamemode == "Abilitky")
 {
     Random generatorCisel = new Random();
     nahodnyindex = generatorCisel.Next(abilities.Length);
+    hadanaAbilita = abilities[nahodnyindex];
     if (hadanaAbilita == "Incendiary")
     {
         AbilityType = "Molly/Dmg dealing";
@@ -590,6 +592,749 @@ else if(gamemode == "Abilitky")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Devour")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Dismiss")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Leer")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Empress")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Alarmbot")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Turret")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Nanoswarm")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Lockdown")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Flashpoint")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Fault line")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Aftershock")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Rolling thunder")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Paranoia")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Dark cover")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Shrouded step")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "From the shadows")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Updraft")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Dash")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Cloudburst")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Blade storm")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Blast pack")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Paint shells")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Boom bot")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Showstopper")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Trailblazer")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Guiding light")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Regrowth")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Seekers")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Blindside")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Gatecrash")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Fakeout")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Dimensional drift")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Nova pulse")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Nebula")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Gravity well")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Cosmic divide")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Flash/Drive")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Zero/Point")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Frag/Ment")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Null/Cmd")
+    {
+        AbilityType = "Heal/Buff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Headhunter")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Rendezvous")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Trademark")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Tour de force")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Relay bolt")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "High gear")
+    {
+        AbilityType = "Mobility";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Fast lane")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Overdrive")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Seize")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Haunt")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Prowler")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Nightfall")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Cove")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "High tide")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Cascade")
+    {
+        AbilityType = "Smoke/Vision block";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Reckoning")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "X";
+    }
+    else if (hadanaAbilita == "Wingman")
+    {
+        AbilityType = "Info gather/Reveal";
+        AbilityBtn = "Q";
+    }
+    else if (hadanaAbilita == "Dizzy")
+    {
+        AbilityType = "Flash";
+        AbilityBtn = "E";
+    }
+    else if (hadanaAbilita == "Moshpit")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "C";
+    }
+    else if (hadanaAbilita == "Thrash")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "X";
+    }
+    while(true)
+    {
+        if (odhadAbility == "Incendiary")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Sky smoke")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Stim beacon")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Orbital strike")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Curveball")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Hot hands")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Blaze")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Run it back")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Slow orb")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Healing orb")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Barrier orb")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Resurrection")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Shock bolt")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Recon bolt")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Owl drone")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Hunter´s fury")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Poison cloud")
+        {
+            GAbilityType = "Smoke/Vision blocl";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Toxic screen")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Snake bite")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Viper´s pit")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Cyber cage")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Spycam")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Trapwire")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Neural theft")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Devour")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Dismiss")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Leer")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Empress")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Alarmbot")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Turret")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Nanoswarm")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Lockdown")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Flashpoint")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Fault line")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Aftershock")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Rolling thunder")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Paranoia")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Dark cover")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Shrouded step")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "From the shadows")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Updraft")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Dash")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Cloudburst")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Blade storm")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Blast pack")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Paint shells")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Boom bot")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Showstopper")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Trailblazer")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "Q";
+        }
+        else if (hadanaAbilita == "Guiding light")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Regrowth")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Seekers")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Blindside")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Gatecrash")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Fakeout")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Dimensional drift")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Nova pulse")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Nebula")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Gravity well")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Cosmic divide")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Flash/Drive")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Zero/Point")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Frag/Ment")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Null/Cmd")
+        {
+            GAbilityType = "Heal/Buff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Headhunter")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Rendezvous")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Trademark")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Tour de force")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Relay bolt")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "High gear")
+        {
+            GAbilityType = "Mobility";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Fast lane")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Overdrive")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Seize")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Haunt")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Prowler")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Nightfall")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Cove")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "High tide")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Cascade")
+        {
+            GAbilityType = "Smoke/Vision block";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Reckoning")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "X";
+        }
+        else if (odhadAbility == "Wingman")
+        {
+            GAbilityType = "Info gather/Reveal";
+            GAbilityBtn = "Q";
+        }
+        else if (odhadAbility == "Dizzy")
+        {
+            GAbilityType = "Flash";
+            GAbilityBtn = "E";
+        }
+        else if (odhadAbility == "Moshpit")
+        {
+            GAbilityType = "Molly/Dmg dealing";
+            GAbilityBtn = "C";
+        }
+        else if (odhadAbility == "Thrash")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "X";
+        }
+        odhadAbility = Console.ReadLine();
+        if (odhadAbility == hadanaAbilita)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Ability type: {AbilityType}");
+            Thread.Sleep(100);
+            Console.WriteLine($"Ability Button: {AbilityBtn}");
+            choice = AnsiConsole.Prompt(
+        new SelectionPrompt<string>()
+            .Title("GG!")
+            .PageSize(10)
+            .HighlightStyle(highlightColor)
+            .AddChoices(new[] {
+           "Menu", "Exit"
+            }));
+        }
+        else
+        {
+            Console.WriteLine("nn");
+        }
     }
 }
 exit:
