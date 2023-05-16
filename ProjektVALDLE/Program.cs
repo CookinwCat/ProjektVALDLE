@@ -356,7 +356,6 @@ if (gamemode == "Agenty")
             GNarodnost = "Ghana";
             Ggender = "žena";
         }
-        #endregion
         if (odhadAgenta == hadanyAgent)
         {
             if (releaseDate == GreleaseDate)
@@ -472,6 +471,7 @@ if (gamemode == "Agenty")
         }
     }
 }
+#endregion
 #region Ability
 else if (gamemode == "Abilitky")
 {
@@ -1492,7 +1492,6 @@ else if (gamemode == "Abilitky")
             GAbilityBtn = "X";
             GAbilityCost = 7;
         }
-        #endregion
         if (odhadAbility == hadanaAbilita)
         {
             AnsiConsole.Markup($"[Lime]Typ {GAbilityType}[/]");
@@ -1556,5 +1555,6 @@ else if (gamemode == "Abilitky")
         }
     }
 }
+#endregion
 exit:
 Console.WriteLine("To bylo moc ez.... Myslim že je čas nerfnout Chambera.");
