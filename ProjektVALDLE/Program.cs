@@ -1,6 +1,7 @@
 ﻿//Streak momentálně nicht worken
 //Abilitky jsou funkční ale mírně jetý
 using Spectre.Console;
+using System.Data;
 
 string releaseDate = "";
 string role = "";
@@ -53,6 +54,7 @@ if (gamemode == "Agenty")
     nahodnyindex = generatorCisel.Next(agents.Length);
     Console.Clear();
     string hadanyAgent = agents[nahodnyindex];
+    #region agents
     if (hadanyAgent == "Jett")
     {
         releaseDate = "Beta";
@@ -352,50 +354,51 @@ if (gamemode == "Agenty")
             GNarodnost = "Ghana";
             Ggender = "žena";
         }
+        #endregion
         if (odhadAgenta == hadanyAgent)
         {
             if (releaseDate == GreleaseDate)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Release date {GreleaseDate}");
+                AnsiConsole.Markup($"[Lime]Release date {GreleaseDate}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Release date {GreleaseDate}");
+                AnsiConsole.Markup($"[Red1]Release date {GreleaseDate}[/]");
+                Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (role == Grole)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Role {Grole}");
+                AnsiConsole.Markup($"[Lime]Role {Grole}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Role {Grole}");
+                AnsiConsole.Markup($"[Red1]Role {Grole}[/]");
+                Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (Narodnost == GNarodnost)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Národnost {GNarodnost}");
+                AnsiConsole.Markup($"[Lime]Národnost {GNarodnost}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Národnost {GNarodnost}");
+                AnsiConsole.Markup($"[Red1]Národnost {GNarodnost}[/]");
+                Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (gender == Ggender)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Pohlaví {Ggender}");
+                AnsiConsole.Markup($"[Lime]Pohlaví {Ggender}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Pohlaví {Ggender}");
+                AnsiConsole.Markup($"[Red1]Pohlaví {Ggender}[/]");
+                Console.WriteLine("");
             }
             Console.ForegroundColor = ConsoleColor.White;
             Thread.Sleep(1000);
@@ -419,47 +422,47 @@ if (gamemode == "Agenty")
         else
         {
             if(releaseDate == GreleaseDate)
-            { 
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Release date {GreleaseDate}");
+            {
+                AnsiConsole.Markup($"[Lime]Release date {GreleaseDate}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor= ConsoleColor.Red;
-                Console.WriteLine($"Release date {GreleaseDate}");
+                AnsiConsole.Markup($"[Red1]Release date {GreleaseDate}[/]");
+                Console.WriteLine("");
             }
             Thread.Sleep(100);
             if(role == Grole)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Role {Grole}");
+                AnsiConsole.Markup($"[Lime]Role {Grole}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Role {Grole}");
+                AnsiConsole.Markup($"[Red1]Role {Grole}[/]");
+                Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (Narodnost == GNarodnost)
             {
-                Console.ForegroundColor=ConsoleColor.Green;
-                Console.WriteLine($"Národnost {GNarodnost}");
+                AnsiConsole.Markup($"[Lime]Role {GNarodnost}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Národnost {GNarodnost}");
+                AnsiConsole.Markup($"[Red1]Role {GNarodnost}[/]");
+                Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (gender == Ggender)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Pohlaví {Ggender}");
+                AnsiConsole.Markup($"[Lime]Role {Ggender}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Pohlaví {Ggender}");
+                AnsiConsole.Markup($"[Red1]Role {Grole}[/]");
+                Console.WriteLine("");
             }
             Console.ReadKey();
             Console.Clear();
@@ -467,7 +470,8 @@ if (gamemode == "Agenty")
         }
     }
 }
-else if(gamemode == "Abilitky")
+#region Ability
+else if (gamemode == "Abilitky")
 {
     Random generatorCisel = new Random();
     nahodnyindex = generatorCisel.Next(abilities.Length);
@@ -1315,6 +1319,7 @@ else if(gamemode == "Abilitky")
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
         }
+        #endregion
         if (odhadAbility == hadanaAbilita)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -1342,23 +1347,23 @@ else if(gamemode == "Abilitky")
         {
             if(AbilityType == GAbilityType)
             {
-                Console.ForegroundColor= ConsoleColor.Green;
-                Console.WriteLine($"Ability type: {GAbilityType}");
+                AnsiConsole.Markup($"[Lime]Role {GAbilityType}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Ability type: {GAbilityType}");
+                AnsiConsole.Markup($"[Red1]Role {GAbilityType}[/]");
+                Console.WriteLine("");
             }
             if(AbilityBtn == GAbilityBtn)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Ability button: {GAbilityBtn}");
+                AnsiConsole.Markup($"[Lime]Role {GAbilityBtn}[/]");
+                Console.WriteLine("");
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Ability button: {GAbilityBtn}");
+                AnsiConsole.Markup($"[Red1]Role {GAbilityBtn}[/]");
+                Console.WriteLine("");
 
             }
         }
