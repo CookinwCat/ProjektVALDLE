@@ -1023,11 +1023,11 @@ else if (gamemode == "Abilitky")
     }
 
 #region Agentprep
-Agents:
     while(true)
     {
         AnsiConsole.Markup($"[Red1]VALDLE![/]");
         Console.WriteLine("");
+    Agents:
         choice = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
         .Title("Tvuj guess?")
@@ -1801,6 +1801,7 @@ new SelectionPrompt<string>()
             .AddChoices(new[] {
            "Menu", "Exit"
             }));
+            Console.Clear();
             if(choice == "Menu")
             {
                 goto Menu;
@@ -1809,7 +1810,6 @@ new SelectionPrompt<string>()
             {
                 goto exit;
             }
-            Console.Clear();
         }
         else
         {
