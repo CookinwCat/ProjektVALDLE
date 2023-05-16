@@ -1,5 +1,5 @@
 ﻿//Streak momentálně nicht worken
-//Abilitky jsou jen v poli 
+//Abilitky jsou funkční ale mírně jetý
 using Spectre.Console;
 
 string releaseDate = "";
@@ -12,7 +12,6 @@ string gender = "";
 string Ggender = "";
 string choice;
 int Streak = 0;
-string choice2;
 int nahodnyindex = 0;
 string gamemode = "";
 string AbilityType = "";
@@ -33,8 +32,8 @@ string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike"
     "Fakeout", "Dimensional drift", "Nova pulse", "Nebula", "Gravity well", "Cosmic divide", "Flash/Drive", "Zero/Point", "Frag/Ment", "Null/Cmd", "Headhunter", "Rendezvous",
     "Trademark", "Tour de force", "Relay bolt", "High gear", "Fast lane", "Overdrive", "Seize", "Haunt", "Prowler", "Nightfall", "Cove", "High tide", "Cascade", "Reckoning",
     "Wingman", "Dizzy", "Moshpit", "Thrash"};
-Console.ForegroundColor = Color.Red1;
-Console.WriteLine("VALDLE!");
+AnsiConsole.Markup($"[Red1]VALDLE![/]");
+Console.WriteLine("");
 Console.ForegroundColor= ConsoleColor.White;
 
 Menu:
