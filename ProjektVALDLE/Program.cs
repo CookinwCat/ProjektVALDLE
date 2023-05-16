@@ -2,7 +2,7 @@
 #region ProgramSetup
 
 var Astra = new Style().Foreground(Color.Purple_2);
-var Jett = new Style().Foreground(Color.PaleTurquoise4);
+var Jett = new Style().Foreground(Color.DarkTurquoise);
 var Raze = new Style().Foreground(Color.DarkOrange3_1);
 var Reyna = new Style().Foreground(Color.MediumOrchid1);
 var Neon = new Style().Foreground(Color.CornflowerBlue);
@@ -1809,6 +1809,7 @@ new SelectionPrompt<string>()
             {
                 goto exit;
             }
+            Console.Clear();
         }
         else
         {
