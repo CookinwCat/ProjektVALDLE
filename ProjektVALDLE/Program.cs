@@ -208,7 +208,16 @@ if (gamemode == "Agenty")
     while (true)
     {
         Console.WriteLine("Tvuj guess?");
-        string odhadAgenta = Console.ReadLine();
+        string odhadAgenta = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
+    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
+    "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra",
+}));
         if (odhadAgenta == "Jett")
         {
             GreleaseDate = "Beta";
