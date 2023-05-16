@@ -847,7 +847,7 @@ else if (gamemode == "Abilitky")
     }
     else if (hadanaAbilita == "Zero/Point")
     {
-        AbilityType = "Stun/Debuff";
+        AbilityType = "Info gather/Reveal";
         AbilityBtn = "E";
         AbilityCost = 0;
     }
@@ -1356,7 +1356,7 @@ else if (gamemode == "Abilitky")
         }
         else if (odhadAbility == "Zero/Point")
         {
-            GAbilityType = "Stun/Debuff";
+            GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "E";
             GAbilityCost = 0;
         }
