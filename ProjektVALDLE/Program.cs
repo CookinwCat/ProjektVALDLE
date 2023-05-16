@@ -1,7 +1,31 @@
 ﻿//Streak momentálně nicht worken
-//Abilitky jsou funkční ale mírně jetý
 using Spectre.Console;
-using System.Data;
+#region ProgramSetup
+
+var Astra = new Style().Foreground(Color.Purple_2);
+var Jett = new Style().Foreground(Color.PaleTurquoise4);
+var Raze = new Style().Foreground(Color.DarkOrange3_1);
+var Reyna = new Style().Foreground(Color.MediumOrchid1);
+var Neon = new Style().Foreground(Color.CornflowerBlue);
+var Phoenix = new Style().Foreground(Color.Orange3);
+var Yoru = new Style().Foreground(Color.DarkBlue);
+var Gekko = new Style().Foreground(Color.Green3_1);
+var Sova = new Style().Foreground(Color.DeepSkyBlue1);
+var Fade = new Style().Foreground(Color.Purple4);
+var Kayo = new Style().Foreground(Color.DarkBlue);
+var Skye = new Style().Foreground(Color.Chartreuse3_1);
+var Breach = new Style().Foreground(Color.Orange4_1);
+var Cypher = new Style().Foreground(Color.Grey37);
+var Sage = new Style().Foreground(Color.Turquoise2);
+var Killjoy = new Style().Foreground(Color.Yellow1);
+var Chamber = new Style().Foreground(Color.Gold3_1);
+var Omen = new Style().Foreground(Color.Blue);
+var Viper = new Style().Foreground(Color.Green4);
+var Harbor = new Style().Foreground(Color.DeepSkyBlue3);
+var Brimstone = new Style().Foreground(Color.OrangeRed1);
+
+
+
 
 string releaseDate = "";
 string role = "";
@@ -35,6 +59,7 @@ string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike"
     "Fakeout", "Dimensional drift", "Nova pulse", "Nebula", "Gravity well", "Cosmic divide", "Flash/Drive", "Zero/Point", "Frag/Ment", "Null/Cmd", "Headhunter", "Rendezvous",
     "Trademark", "Tour de force", "Relay bolt", "High gear", "Fast lane", "Overdrive", "Seize", "Haunt", "Prowler", "Nightfall", "Cove", "High tide", "Cascade", "Reckoning",
     "Wingman", "Dizzy", "Moshpit", "Thrash"};
+#endregion
 AnsiConsole.Markup($"[Red1]VALDLE![/]");
 Console.WriteLine("");
 Console.ForegroundColor= ConsoleColor.White;
@@ -49,14 +74,14 @@ gamemode = AnsiConsole.Prompt(
         .AddChoices(new[] {
            "Agenty", "Abilitky"
         }));
-
+#region agents
 if (gamemode == "Agenty")
 {
     Random generatorCisel = new Random();
     nahodnyindex = generatorCisel.Next(agents.Length);
     Console.Clear();
     string hadanyAgent = agents[nahodnyindex];
-    #region agents
+
     if (hadanyAgent == "Jett")
     {
         releaseDate = "Beta";
@@ -207,10 +232,9 @@ if (gamemode == "Agenty")
 
     while (true)
     {
-        Console.WriteLine("Tvuj guess?");
         string odhadAgenta = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Tvuj guess?")
 .PageSize(10)
 .HighlightStyle(highlightColor)
 .AddChoices(new[] {
@@ -471,7 +495,7 @@ new SelectionPrompt<string>()
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Pohlaví {Grole}[/]");
+                AnsiConsole.Markup($"[Red1]Pohlaví {Ggender}[/]");
                 Console.WriteLine("");
             }
             Console.ReadKey();
@@ -992,6 +1016,7 @@ else if (gamemode == "Abilitky")
         AbilityBtn = "X";
         AbilityCost = 7;
     }
+    Agents:
     while(true)
     {
         choice = AnsiConsole.Prompt(
@@ -1010,9 +1035,9 @@ else if (gamemode == "Abilitky")
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Jett)
 .AddChoices(new[] {
-           "Updraft","Dash", "Cloudburst", "Blade storm"
+           "Updraft","Dash", "Cloudburst", "Blade storm", "Zpátky"
 }));
         }
         else if(choice == "Raze")
@@ -1021,9 +1046,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Raze)
 .AddChoices(new[] {
-           "Blast pack","Paint shells", "Boom bot", "Showstopper"
+           "Blast pack","Paint shells", "Boom bot", "Showstopper", "Zpátky"
 }));
         }
         else if(choice == "Reyna")
@@ -1032,9 +1057,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Reyna)
 .AddChoices(new[] {
-           "Dismiss","Devour", "Leer", "Empress"
+           "Dismiss","Devour", "Leer", "Empress", "Zpátky"
 }));
         }
         else if(choice == "Neon")
@@ -1043,9 +1068,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Neon)
 .AddChoices(new[] {
-           "Relay bolt","High gear", "Fast lane", "Overdrive"
+           "Relay bolt","High gear", "Fast lane", "Overdrive", "Zpátky"
 }));
         }
         else if(choice == "Phoenix")
@@ -1054,9 +1079,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Phoenix)
 .AddChoices(new[] {
-           "Curveball","Hot hands", "Blaze", "Run it back"
+           "Curveball","Hot hands", "Blaze", "Run it back", "Zpátky"
 }));
         }
         else if(choice == "Yoru")
@@ -1065,9 +1090,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Yoru)
 .AddChoices(new[] {
-           "Blindside","Gatecrash", "Fakeout", "Dimensional drift"
+           "Blindside","Gatecrash", "Fakeout", "Dimensional drift", "Zpátky"
 }));
         }
         else if(choice == "Gekko")
@@ -1076,9 +1101,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Gekko)
 .AddChoices(new[] {
-           "Wingman","Dizzy", "Moshpit", "Thrash"
+           "Wingman","Dizzy", "Moshpit", "Thrash", "Zpátky"
 }));
         }
         else if (choice == "Sova")
@@ -1087,9 +1112,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Sova)
 .AddChoices(new[] {
-           "Shock bolt","Recon bolt", "Owl drone", "Hunter´s fury"
+           "Shock bolt","Recon bolt", "Owl drone", "Hunter´s fury", "Zpátky"
 }));
         }
         else if(choice == "Fade")
@@ -1098,9 +1123,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Fade)
 .AddChoices(new[] {
-           "Seize","Haunt", "Prowler", "Nightfall"
+           "Seize","Haunt", "Prowler", "Nightfall", "Zpátky"
 }));
         }
         else if(choice == "Kayo")
@@ -1109,9 +1134,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Kayo)
 .AddChoices(new[] {
-           "Flash/Drive","Zero/Point", "Frag/Ment", "Null/Cmd"
+           "Flash/Drive","Zero/Point", "Frag/Ment", "Null/Cmd", "Zpátky"
 }));
         }
         else if(choice == "Skye")
@@ -1120,9 +1145,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Skye)
 .AddChoices(new[] {
-           "Trailblazer","Guiding light", "Regrowth", "Seekers"
+           "Trailblazer","Guiding light", "Regrowth", "Seekers", "Zpátky"
 }));
         }
         else if(choice == "Breach")
@@ -1131,9 +1156,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Breach)
 .AddChoices(new[] {
-           "Flashpoint","Fault line", "Aftershock", "Rolling thunder"
+           "Flashpoint","Fault line", "Aftershock", "Rolling thunder", "Zpátky"
 }));
         }
         else if(choice == "Cypher")
@@ -1142,9 +1167,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Cypher)
 .AddChoices(new[] {
-           "Cyber cage","Spycam", "Trapwire", "Neural theft"
+           "Cyber cage","Spycam", "Trapwire", "Neural theft", "Zpátky"
 }));
         }
         else if(choice == "Sage")
@@ -1153,9 +1178,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Sage)
 .AddChoices(new[] {
-           "Slow orb","Healing orb", "Barrier orb", "Resurrection"
+           "Slow orb","Healing orb", "Barrier orb", "Resurrection", "Zpátky"
 }));
         }
         else if(choice == "Killjoy")
@@ -1164,9 +1189,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Killjoy)
 .AddChoices(new[] {
-           "Alarmbot","Turret", "Nanoswarm", "Lockdown"
+           "Alarmbot","Turret", "Nanoswarm", "Lockdown", "Zpátky"
 }));
         }
         else if(choice == "Chamber")
@@ -1175,9 +1200,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Chamber)
 .AddChoices(new[] {
-           "Headhunter","Rendezvous", "Trademark", "Tour de force"
+           "Headhunter","Rendezvous", "Trademark", "Tour de force", "Zpátky"
 }));
         }
         else if(choice == "Omen")
@@ -1186,9 +1211,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Omen)
 .AddChoices(new[] {
-           "Paranoia","Dark cover", "Shrouded step", "From the shadows"
+           "Paranoia","Dark cover", "Shrouded step", "From the shadows", "Zpátky"
 }));
         }
         else if(choice =="Viper")
@@ -1197,9 +1222,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Viper)
 .AddChoices(new[] {
-           "Poison cloud","Toxic screen", "Snake bite", "Viper´s pit"
+           "Poison cloud","Toxic screen", "Snake bite", "Viper´s pit", "Zpátky"
 }));
         }
         else if(choice == "Harbor")
@@ -1208,9 +1233,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Harbor)
 .AddChoices(new[] {
-           "Cove","High tide", "Cascade", "Reckoning"
+           "Cove","High tide", "Cascade", "Reckoning", "Zpátky"
 }));
         }
         else if(choice == "Brimstone")
@@ -1219,9 +1244,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Brimstone)
 .AddChoices(new[] {
-           "Incendiary","Sky smoke", "Stim beacon", "Orbital strike"
+           "Incendiary","Sky smoke", "Stim beacon", "Orbital strike", "Zpátky"
 }));
         }
         else if(choice == "Astra")
@@ -1230,9 +1255,9 @@ new SelectionPrompt<string>()
 new SelectionPrompt<string>()
 .Title("Chceš hádat agenty nebo abilitky?")
 .PageSize(10)
-.HighlightStyle(highlightColor)
+.HighlightStyle(Astra)
 .AddChoices(new[] {
-           "Nova pulse","Nebula", "Gravity well", "Cosmic divide"
+           "Nova pulse","Nebula", "Gravity well", "Cosmic divide", "Zpátky"
 }));
         }
 
@@ -1742,6 +1767,10 @@ new SelectionPrompt<string>()
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
             GAbilityCost = 7;
+        }
+        else if (odhadAbility == "Zpátky")
+        {
+            goto Agents;
         }
         if (odhadAbility == hadanaAbilita)
         {
