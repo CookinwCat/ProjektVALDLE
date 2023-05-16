@@ -1021,7 +1021,7 @@ else if (gamemode == "Abilitky")
     {
         choice = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
-        .Title("Chceš hádat agenty nebo abilitky?")
+        .Title("Tvuj guess?")
         .PageSize(10)
         .HighlightStyle(highlightColor)
         .AddChoices(new[] {
