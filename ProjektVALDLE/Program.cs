@@ -21,6 +21,8 @@ string hadanaAbilita = "";
 string odhadAbility = "";
 string GAbilityType = "";
 string GAbilityBtn = "";
+int AbilityCost = 0;
+int GAbilityCost = 0;
 
 string[] agents = {"Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
     "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
@@ -480,844 +482,1015 @@ else if (gamemode == "Abilitky")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "Q";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Sky smoke")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "E";
+        AbilityCost = 100;
     }
     else if (hadanaAbilita == "Stim beacon")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Orbital strike")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Curveball")
     {
         AbilityType = "Flash";
         AbilityBtn = "Q";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Hot hands")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Blaze")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "C";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Run it back")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "X";
+        AbilityCost = 6;
+
     }
     else if (hadanaAbilita == "Slow orb")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Healing orb")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Barrier orb")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "C";
+        AbilityCost = 400;
     }
     else if (hadanaAbilita == "Resurrection")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Shock bolt")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "Q";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Recon bolt")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Owl drone")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "C";
+        AbilityCost = 400;
     }
     else if (hadanaAbilita == "Hunter´s fury")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Poison cloud")
     {
         AbilityType = "Smoke/Vision blocl";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Toxic screen")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Snake bite")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Viper´s pit")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Cyber cage")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "Q";
+        AbilityCost = 100;
     }
     else if (hadanaAbilita == "Spycam")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Trapwire")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Neural theft")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "X";
+        AbilityCost = 6;
     }
     else if (hadanaAbilita == "Devour")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Dismiss")
     {
         AbilityType = "Mobility";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Leer")
     {
         AbilityType = "Flash";
         AbilityBtn = "C";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Empress")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "X";
+        AbilityCost = 6;
     }
     else if (hadanaAbilita == "Alarmbot")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Turret")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Nanoswarm")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Lockdown")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Flashpoint")
     {
         AbilityType = "Flash";
         AbilityBtn = "Q";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Fault line")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Aftershock")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Rolling thunder")
     {
         AbilityType = "Stun/Debuff";
-        AbilityBtn = "X";
+        AbilityBtn = "X"; 
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Paranoia")
     {
         AbilityType = "Flash";
         AbilityBtn = "Q";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Dark cover")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "E";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Shrouded step")
     {
         AbilityType = "Mobility";
         AbilityBtn = "C";
+        AbilityCost = 100;
     }
     else if (hadanaAbilita == "From the shadows")
     {
         AbilityType = "Mobility";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Updraft")
     {
         AbilityType = "Mobility";
         AbilityBtn = "Q";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Dash")
     {
         AbilityType = "Mobility";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Cloudburst")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Blade storm")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Blast pack")
     {
         AbilityType = "Mobility";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Paint shells")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Boom bot")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "C";
+        AbilityCost = 300;
     }
     else if (hadanaAbilita == "Showstopper")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Trailblazer")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "Q";
+        AbilityCost = 300;
     }
     else if (hadanaAbilita == "Guiding light")
     {
         AbilityType = "Flash";
         AbilityBtn = "E";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Regrowth")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "C";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Seekers")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Blindside")
     {
         AbilityType = "Flash";
         AbilityBtn = "Q";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Gatecrash")
     {
         AbilityType = "Mobility";
         AbilityBtn = "E";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Fakeout")
     {
         AbilityType = "Flash";
         AbilityBtn = "C";
+        AbilityCost = 100;
     }
     else if (hadanaAbilita == "Dimensional drift")
     {
         AbilityType = "Mobility";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Nova pulse")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "Q";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Nebula")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "E";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Gravity well")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "C";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Cosmic divide")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Flash/Drive")
     {
         AbilityType = "Flash";
         AbilityBtn = "Q";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Zero/Point")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Frag/Ment")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Null/Cmd")
     {
         AbilityType = "Heal/Buff";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Headhunter")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "Q";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Rendezvous")
     {
         AbilityType = "Mobility";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Trademark")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "C";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Tour de force")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Relay bolt")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "High gear")
     {
         AbilityType = "Mobility";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Fast lane")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "C";
+        AbilityCost = 300;
     }
     else if (hadanaAbilita == "Overdrive")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Seize")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "Q";
+        AbilityCost = 200;
     }
     else if (hadanaAbilita == "Haunt")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Prowler")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "C";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Nightfall")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "X";
+        AbilityCost = 8;
     }
     else if (hadanaAbilita == "Cove")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "Q";
+        AbilityCost = 350;
     }
     else if (hadanaAbilita == "High tide")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Cascade")
     {
         AbilityType = "Smoke/Vision block";
         AbilityBtn = "C";
+        AbilityCost = 150;
     }
     else if (hadanaAbilita == "Reckoning")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     else if (hadanaAbilita == "Wingman")
     {
         AbilityType = "Info gather/Reveal";
         AbilityBtn = "Q";
+        AbilityCost = 300;
     }
     else if (hadanaAbilita == "Dizzy")
     {
         AbilityType = "Flash";
         AbilityBtn = "E";
+        AbilityCost = 0;
     }
     else if (hadanaAbilita == "Moshpit")
     {
         AbilityType = "Molly/Dmg dealing";
         AbilityBtn = "C";
+        AbilityCost = 250;
     }
     else if (hadanaAbilita == "Thrash")
     {
         AbilityType = "Stun/Debuff";
         AbilityBtn = "X";
+        AbilityCost = 7;
     }
     while(true)
     {
+        Console.WriteLine("Tvuj guess?");
         odhadAbility = Console.ReadLine();
         if (odhadAbility == "Incendiary")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "Q";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Sky smoke")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "E";
+            GAbilityCost = 100;
         }
         else if (odhadAbility == "Stim beacon")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
+
         }
         else if (odhadAbility == "Orbital strike")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Curveball")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "Q";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Hot hands")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Blaze")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "C";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Run it back")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "X";
+            GAbilityCost = 6;
         }
         else if (odhadAbility == "Slow orb")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Healing orb")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Barrier orb")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "C";
+            GAbilityCost = 400;
         }
         else if (odhadAbility == "Resurrection")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Shock bolt")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "Q";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Recon bolt")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Owl drone")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "C";
+            GAbilityCost = 400;
         }
         else if (odhadAbility == "Hunter´s fury")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Poison cloud")
         {
-            GAbilityType = "Smoke/Vision blocl";
+            GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Toxic screen")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Snake bite")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Viper´s pit")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Cyber cage")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "Q";
+            GAbilityCost = 100;
         }
         else if (odhadAbility == "Spycam")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Trapwire")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Neural theft")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "X";
+            GAbilityCost = 6;
         }
         else if (odhadAbility == "Devour")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Dismiss")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Leer")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "C";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Empress")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "X";
+            GAbilityCost = 6;
         }
         else if (odhadAbility == "Alarmbot")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Turret")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Nanoswarm")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Lockdown")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Flashpoint")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "Q";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Fault line")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Aftershock")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Rolling thunder")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Paranoia")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "Q";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Dark cover")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "E";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Shrouded step")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "C";
+            GAbilityCost = 100;
         }
         else if (odhadAbility == "From the shadows")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Updraft")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "Q";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Dash")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Cloudburst")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Blade storm")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Blast pack")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Paint shells")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Boom bot")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "C";
+            GAbilityCost = 300;
         }
         else if (odhadAbility == "Showstopper")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Trailblazer")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "Q";
+            GAbilityCost = 300;
         }
         else if (hadanaAbilita == "Guiding light")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "E";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Regrowth")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "C";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Seekers")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Blindside")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "Q";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Gatecrash")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "E";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Fakeout")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "C";
+            GAbilityCost = 100;
         }
         else if (odhadAbility == "Dimensional drift")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Nova pulse")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "Q";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Nebula")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "E";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Gravity well")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "C";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Cosmic divide")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Flash/Drive")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "Q";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Zero/Point")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Frag/Ment")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Null/Cmd")
         {
             GAbilityType = "Heal/Buff";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Headhunter")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "Q";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Rendezvous")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Trademark")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "C";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Tour de force")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Relay bolt")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "High gear")
         {
             GAbilityType = "Mobility";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Fast lane")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "C";
+            GAbilityCost = 300;
         }
         else if (odhadAbility == "Overdrive")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Seize")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "Q";
+            GAbilityCost = 200;
         }
         else if (odhadAbility == "Haunt")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Prowler")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "C";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Nightfall")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "X";
+            GAbilityCost = 8;
         }
         else if (odhadAbility == "Cove")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "Q";
+            GAbilityCost = 350;
         }
         else if (odhadAbility == "High tide")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Cascade")
         {
             GAbilityType = "Smoke/Vision block";
             GAbilityBtn = "C";
+            GAbilityCost = 150;
         }
         else if (odhadAbility == "Reckoning")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         else if (odhadAbility == "Wingman")
         {
             GAbilityType = "Info gather/Reveal";
             GAbilityBtn = "Q";
+            GAbilityCost = 300;
         }
         else if (odhadAbility == "Dizzy")
         {
             GAbilityType = "Flash";
             GAbilityBtn = "E";
+            GAbilityCost = 0;
         }
         else if (odhadAbility == "Moshpit")
         {
             GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "C";
+            GAbilityCost = 250;
         }
         else if (odhadAbility == "Thrash")
         {
             GAbilityType = "Stun/Debuff";
             GAbilityBtn = "X";
+            GAbilityCost = 7;
         }
         #endregion
         if (odhadAbility == hadanaAbilita)
