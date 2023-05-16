@@ -670,7 +670,7 @@ else if (gamemode == "Abilitky")
     else if (hadanaAbilita == "Dismiss")
     {
         AbilityType = "Mobility";
-        AbilityBtn = "Q";
+        AbilityBtn = "E";
         AbilityCost = 200;
     }
     else if (hadanaAbilita == "Leer")
@@ -1426,7 +1426,7 @@ new SelectionPrompt<string>()
         else if (odhadAbility == "Dismiss")
         {
             GAbilityType = "Mobility";
-            GAbilityBtn = "Q";
+            GAbilityBtn = "E";
             GAbilityCost = 200;
         }
         else if (odhadAbility == "Leer")
