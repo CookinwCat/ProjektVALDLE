@@ -1,5 +1,4 @@
-﻿//Streak momentálně nicht worken
-using Spectre.Console;
+﻿using Spectre.Console;
 #region ProgramSetup
 
 var Astra = new Style().Foreground(Color.Purple_2);
@@ -75,6 +74,7 @@ gamemode = AnsiConsole.Prompt(
            "Agenty", "Abilitky"
         }));
 Console.Clear();
+
 #region agents
 if (gamemode == "Agenty")
 {
@@ -231,6 +231,7 @@ if (gamemode == "Agenty")
         gender = "žena";
     }
 
+    #region AgentGuesser
     while (true)
     {
         AnsiConsole.Markup($"[Red1]VALDLE![/]");
@@ -507,6 +508,7 @@ new SelectionPrompt<string>()
         }
     }
 }
+#endregion
 #endregion
 #region Ability
 else if (gamemode == "Abilitky")
@@ -1019,7 +1021,9 @@ else if (gamemode == "Abilitky")
         AbilityBtn = "X";
         AbilityCost = 7;
     }
-    Agents:
+
+#region Agentprep
+Agents:
     while(true)
     {
         AnsiConsole.Markup($"[Red1]VALDLE![/]");
@@ -1265,7 +1269,7 @@ new SelectionPrompt<string>()
            "Nova pulse","Nebula", "Gravity well", "Cosmic divide", "Zpátky"
 }));
         }
-
+        #endregion
 
 
         if (odhadAbility == "Incendiary")
@@ -1777,6 +1781,8 @@ new SelectionPrompt<string>()
         {
             goto Agents;
         }
+
+        #region AbilityGuesser
         if (odhadAbility == hadanaAbilita)
         {
             AnsiConsole.Markup($"[Lime]Typ {GAbilityType}[/]");
@@ -1842,6 +1848,7 @@ new SelectionPrompt<string>()
         }
     }
 }
+#endregion
 #endregion
 exit:
 Console.WriteLine("To bylo moc ez.... Myslim že je čas nerfnout Chambera.");
