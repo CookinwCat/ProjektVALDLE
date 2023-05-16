@@ -985,8 +985,250 @@ else if (gamemode == "Abilitky")
     }
     while(true)
     {
-        Console.WriteLine("Tvuj guess?");
-        odhadAbility = Console.ReadLine();
+        choice = AnsiConsole.Prompt(
+    new SelectionPrompt<string>()
+        .Title("Chceš hádat agenty nebo abilitky?")
+        .PageSize(10)
+        .HighlightStyle(highlightColor)
+        .AddChoices(new[] {
+           "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
+    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
+    "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra",
+        }));
+        if (choice == "Jett")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Updraft","Dash", "Cloudburst", "Blade storm"
+}));
+        }
+        else if(choice == "Raze")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Blast pack","Paint shells", "Boom bot", "Showstopper"
+}));
+        }
+        else if(choice == "Reyna")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Dismiss","Devour", "Leer", "Empress"
+}));
+        }
+        else if(choice == "Neon")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Relay bolt","High gear", "Fast lane", "Overdrive"
+}));
+        }
+        else if(choice == "Phoenix")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Curveball","Hot hands", "Blaze", "Run it back"
+}));
+        }
+        else if(choice == "Yoru")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Blindside","Gatecrash", "Fakeout", "Dimensional drift"
+}));
+        }
+        else if(choice == "Gekko")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Wingman","Dizzy", "Moshpit", "Thrash"
+}));
+        }
+        else if (choice == "Sova")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Shock bolt","Recon bolt", "Owl drone", "Hunter´s fury"
+}));
+        }
+        else if(choice == "Fade")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Seize","Haunt", "Prowler", "Nightfall"
+}));
+        }
+        else if(choice == "Kayo")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Flash/Drive","Zero/Point", "Frag/Ment", "Null/Cmd"
+}));
+        }
+        else if(choice == "Skye")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Trailblazer","Guiding light", "Regrowth", "Seekers"
+}));
+        }
+        else if(choice == "Breach")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Flashpoint","Fault line", "Aftershock", "Rolling thunder"
+}));
+        }
+        else if(choice == "Cypher")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Cyber cage","Spycam", "Trapwire", "Neural theft"
+}));
+        }
+        else if(choice == "Sage")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Slow orb","Healing orb", "Barrier orb", "Resurrection"
+}));
+        }
+        else if(choice == "Killjoy")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Alarmbot","Turret", "Nanoswarm", "Lockdown"
+}));
+        }
+        else if(choice == "Chamber")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Headhunter","Rendezvous", "Trademark", "Tour de force"
+}));
+        }
+        else if(choice == "Omen")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Paranoia","Dark cover", "Shrouded step", "From the shadows"
+}));
+        }
+        else if(choice =="Viper")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Poison cloud","Toxic screen", "Snake bite", "Viper´s pit"
+}));
+        }
+        else if(choice == "Harbor")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Cove","High tide", "Cascade", "Reckoning"
+}));
+        }
+        else if(choice == "Brimstone")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Incendiary","Sky smoke", "Stim beacon", "Orbital strike"
+}));
+        }
+        else if(choice == "Astra")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Chceš hádat agenty nebo abilitky?")
+.PageSize(10)
+.HighlightStyle(highlightColor)
+.AddChoices(new[] {
+           "Nova pulse","Nebula", "Gravity well", "Cosmic divide"
+}));
+        }
+
+
+
         if (odhadAbility == "Incendiary")
         {
             GAbilityType = "Molly/Dmg dealing";
@@ -1552,6 +1794,8 @@ else if (gamemode == "Abilitky")
                 AnsiConsole.Markup($"[Red1]Cena {GAbilityCost}[/]");
                 Console.WriteLine("");
             }
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
