@@ -74,6 +74,7 @@ gamemode = AnsiConsole.Prompt(
         .AddChoices(new[] {
            "Agenty", "Abilitky"
         }));
+Console.Clear();
 #region agents
 if (gamemode == "Agenty")
 {
@@ -232,6 +233,8 @@ if (gamemode == "Agenty")
 
     while (true)
     {
+        AnsiConsole.Markup($"[Red1]VALDLE![/]");
+        Console.WriteLine("");
         string odhadAgenta = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
 .Title("Tvuj guess?")
@@ -1019,6 +1022,8 @@ else if (gamemode == "Abilitky")
     Agents:
     while(true)
     {
+        AnsiConsole.Markup($"[Red1]VALDLE![/]");
+        Console.WriteLine("");
         choice = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
         .Title("Tvuj guess?")
