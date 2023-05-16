@@ -1539,6 +1539,16 @@ else if (gamemode == "Abilitky")
                 Console.WriteLine("");
 
             }
+            if(AbilityCost== GAbilityCost)
+            {
+                AnsiConsole.Markup($"[Lime]Role {GAbilityCost}[/]");
+                Console.WriteLine("");
+            }
+            else
+            {
+                AnsiConsole.Markup($"[Red1]Role {GAbilityCost}[/]");
+                Console.WriteLine("");
+            }
         }
     }
 }
