@@ -447,23 +447,23 @@ if (gamemode == "Agenty")
             Thread.Sleep(100);
             if (Narodnost == GNarodnost)
             {
-                AnsiConsole.Markup($"[Lime]Role {GNarodnost}[/]");
+                AnsiConsole.Markup($"[Lime]Národnost {GNarodnost}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Role {GNarodnost}[/]");
+                AnsiConsole.Markup($"[Red1]Národnost {GNarodnost}[/]");
                 Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (gender == Ggender)
             {
-                AnsiConsole.Markup($"[Lime]Role {Ggender}[/]");
+                AnsiConsole.Markup($"[Lime]Pohlaví {Ggender}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Role {Grole}[/]");
+                AnsiConsole.Markup($"[Red1]Pohlaví {Grole}[/]");
                 Console.WriteLine("");
             }
             Console.ReadKey();
@@ -1495,10 +1495,14 @@ else if (gamemode == "Abilitky")
         #endregion
         if (odhadAbility == hadanaAbilita)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Ability type: {AbilityType}");
+            AnsiConsole.Markup($"[Lime]Typ {GAbilityType}[/]");
+            Console.WriteLine("");
             Thread.Sleep(100);
-            Console.WriteLine($"Ability Button: {AbilityBtn}");
+            AnsiConsole.Markup($"[Lime]Button {GAbilityBtn}[/]");
+            Console.WriteLine("");
+            Thread.Sleep(100);
+            AnsiConsole.Markup($"[Lime]Cena {GAbilityCost}[/]");
+            Console.WriteLine("");
             choice = AnsiConsole.Prompt(
         new SelectionPrompt<string>()
             .Title("GG!")
@@ -1520,33 +1524,33 @@ else if (gamemode == "Abilitky")
         {
             if(AbilityType == GAbilityType)
             {
-                AnsiConsole.Markup($"[Lime]Role {GAbilityType}[/]");
+                AnsiConsole.Markup($"[Lime]Typ {GAbilityType}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Role {GAbilityType}[/]");
+                AnsiConsole.Markup($"[Red1]Typ {GAbilityType}[/]");
                 Console.WriteLine("");
             }
             if(AbilityBtn == GAbilityBtn)
             {
-                AnsiConsole.Markup($"[Lime]Role {GAbilityBtn}[/]");
+                AnsiConsole.Markup($"[Lime]Button {GAbilityBtn}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Role {GAbilityBtn}[/]");
+                AnsiConsole.Markup($"[Red1]Button {GAbilityBtn}[/]");
                 Console.WriteLine("");
 
             }
             if(AbilityCost== GAbilityCost)
             {
-                AnsiConsole.Markup($"[Lime]Role {GAbilityCost}[/]");
+                AnsiConsole.Markup($"[Lime]Cena {GAbilityCost}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Role {GAbilityCost}[/]");
+                AnsiConsole.Markup($"[Red1]Cena {GAbilityCost}[/]");
                 Console.WriteLine("");
             }
         }
