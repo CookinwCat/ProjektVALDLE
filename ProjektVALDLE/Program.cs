@@ -23,7 +23,7 @@ var Viper = new Style().Foreground(Color.Green4);
 var Harbor = new Style().Foreground(Color.DeepSkyBlue3);
 var Brimstone = new Style().Foreground(Color.OrangeRed1);
 
-
+DateTime time = DateTime.Now;
 
 
 string releaseDate = "";
@@ -35,12 +35,12 @@ string GNarodnost = "";
 string gender = "";
 string Ggender = "";
 string choice;
-int Streak = 0;
-int nahodnyindex = 0;
-string gamemode = "";
+int Streak;
+int nahodnyindex;
+string gamemode;
 string AbilityType = "";
 string AbilityBtn = "";
-string hadanaAbilita = "";
+string hadanaAbilita;
 string odhadAbility = "";
 string GAbilityType = "";
 string GAbilityBtn = "";
@@ -60,6 +60,7 @@ string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike"
     "Wingman", "Dizzy", "Moshpit", "Thrash"};
 #endregion
 AnsiConsole.Markup($"[Red1]VALDLE![/]");
+
 Console.WriteLine("");
 Console.ForegroundColor= ConsoleColor.White;
 
@@ -71,14 +72,14 @@ gamemode = AnsiConsole.Prompt(
         .PageSize(10)
         .HighlightStyle(highlightColor)
         .AddChoices(new[] {
-           "Agenty", "Abilitky"
+           "Agenty", "Abilitky", "Streak"
         }));
 Console.Clear();
 
 #region agents
 if (gamemode == "Agenty")
 {
-    Random generatorCisel = new Random();
+    Random generatorCisel = new();
     nahodnyindex = generatorCisel.Next(agents.Length);
     Console.Clear();
     string hadanyAgent = agents[nahodnyindex];
@@ -448,18 +449,19 @@ new SelectionPrompt<string>()
                     .AddChoices(new[] {
            "Menu", "Exit"
                     }));
+            Console.Clear();
             if (choice == "Menu")
             {
                 goto Menu;
             }
-            else if(choice == "Exit")
+            else if (choice == "Exit")
             {
                 goto exit;
             }
         }
         else
         {
-            if(releaseDate == GreleaseDate)
+            if (releaseDate == GreleaseDate)
             {
                 AnsiConsole.Markup($"[Lime]Release date {GreleaseDate}[/]");
                 Console.WriteLine("");
@@ -470,7 +472,7 @@ new SelectionPrompt<string>()
                 Console.WriteLine("");
             }
             Thread.Sleep(100);
-            if(role == Grole)
+            if (role == Grole)
             {
                 AnsiConsole.Markup($"[Lime]Role {Grole}[/]");
                 Console.WriteLine("");
@@ -513,7 +515,7 @@ new SelectionPrompt<string>()
 #region Ability
 else if (gamemode == "Abilitky")
 {
-    Random generatorCisel = new Random();
+    Random generatorCisel = new ();
     nahodnyindex = generatorCisel.Next(abilities.Length);
     hadanaAbilita = abilities[nahodnyindex];
     if (hadanaAbilita == "Incendiary")
@@ -1068,7 +1070,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Reyna)
 .AddChoices(new[] {
-           "Dismiss","Devour", "Leer", "Empress", "Zpátky"
+           "Devour","Dismiss", "Leer", "Empress", "Zpátky"
 }));
         }
         else if(choice == "Neon")
@@ -1851,5 +1853,25 @@ new SelectionPrompt<string>()
 }
 #endregion
 #endregion
+else if (gamemode == "Streak")
+    {
+        string zapisovany, precteny = "0";
+        if (File.Exists("soubor.txt") && File.Exists("datum.txt"))
+        {
+
+        precteny = File.ReadAllText("soubor.txt");
+        }
+        else
+        {
+            zapisovany = "0";
+        File.WriteAllText("soubor.txt", zapisovany);
+        File.WriteAllText("datum.txt", time.Day.ToString());
+        }
+
+        AnsiConsole.Markup($"[purple_2]Tvuj momentální streak je {precteny}![/]");
+        Console.ReadKey();
+        goto Menu;
+
+   }
 exit:
 Console.WriteLine("To bylo moc ez.... Myslim že je čas nerfnout Chambera.");
