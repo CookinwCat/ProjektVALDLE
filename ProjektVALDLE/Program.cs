@@ -638,7 +638,7 @@ else if (gamemode == "Abilitky")
     }
     else if (hadanaAbilita == "Poison cloud")
     {
-        AbilityType = "Smoke/Vision blocl";
+        AbilityType = "Smoke/Vision block";
         AbilityBtn = "Q";
         AbilityCost = 200;
     }
