@@ -24,7 +24,28 @@ var Harbor = new Style().Foreground(Color.DeepSkyBlue3);
 var Brimstone = new Style().Foreground(Color.OrangeRed1);
 
 DateTime time = DateTime.Now;
+int den = time.Day;
+File.WriteAllText("datum.txt", time.ToString());
 
+string precteneDatum = File.ReadAllText("datum.txt");
+DateTime prectenyCas = DateTime.Parse(precteneDatum);
+
+if(!File.Exists("streak.txt"))
+{
+    File.WriteAllText("streak.txt", "0");
+}
+
+if(den >= prectenyCas.Day + 2)
+{
+    File.WriteAllText("streak.txt", "0");
+}
+else if(den != prectenyCas.Day)
+{ 
+    string obsahTxt = File.ReadAllText("streak.txt");
+    int streacik = Convert.ToInt32(obsahTxt);
+    streacik++;
+    File.WriteAllText("streak.txt", streacik.ToString());
+}
 
 string releaseDate = "";
 string role = "";
@@ -1855,20 +1876,14 @@ new SelectionPrompt<string>()
 #endregion
 else if (gamemode == "Streak")
     {
-        string zapisovany, precteny = "0";
-        if (File.Exists("soubor.txt") && File.Exists("datum.txt"))
+
+        if (File.Exists("streak.txt") && File.Exists("datum.txt"))
         {
 
-        precteny = File.ReadAllText("soubor.txt");
-        }
-        else
-        {
-            zapisovany = "0";
-        File.WriteAllText("soubor.txt", zapisovany);
-        File.WriteAllText("datum.txt", time.Day.ToString());
-        }
+        string prectenyStreak = File.ReadAllText("streak.txt");
 
-        AnsiConsole.Markup($"[purple_2]Tvuj momentální streak je {precteny}![/]");
+            AnsiConsole.Markup($"[purple_2]Tvuj momentální streak je {prectenyStreak}![/]");
+        }
         Console.ReadKey();
         goto Menu;
 
