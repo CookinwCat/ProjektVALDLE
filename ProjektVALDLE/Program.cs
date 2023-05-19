@@ -56,7 +56,6 @@ string GNarodnost = "";
 string gender = "";
 string Ggender = "";
 string choice;
-int Streak;
 int nahodnyindex;
 string gamemode;
 string AbilityType = "";
@@ -80,8 +79,7 @@ string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike"
     "Trademark", "Tour de force", "Relay bolt", "High gear", "Fast lane", "Overdrive", "Seize", "Haunt", "Prowler", "Nightfall", "Cove", "High tide", "Cascade", "Reckoning",
     "Wingman", "Dizzy", "Moshpit", "Thrash"};
 #endregion
-AnsiConsole.Markup($"[Red1]VALDLE![/]");
-
+AnsiConsole.Markup($"[Red1]               VALDLE![/]");
 Console.WriteLine("");
 Console.ForegroundColor= ConsoleColor.White;
 
@@ -89,16 +87,16 @@ Menu:
 var highlightColor = new Style().Foreground(Color.Red1);
 gamemode = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
-        .Title("Chceš hádat agenty nebo abilitky?")
+        .Title("The place of unlimitedly limited choices!")
         .PageSize(10)
         .HighlightStyle(highlightColor)
         .AddChoices(new[] {
-           "Agenty", "Abilitky", "Streak"
+           "Agent guesser", "Ability guesser", "Streak", "End"
         }));
 Console.Clear();
 
 #region agents
-if (gamemode == "Agenty")
+if (gamemode == "Agent guesser")
 {
     Random generatorCisel = new();
     nahodnyindex = generatorCisel.Next(agents.Length);
@@ -256,7 +254,7 @@ if (gamemode == "Agenty")
     #region AgentGuesser
     while (true)
     {
-        AnsiConsole.Markup($"[Red1]VALDLE![/]");
+        AnsiConsole.Markup($"[Red1]               VALDLE![/]");
         Console.WriteLine("");
         string odhadAgenta = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -534,7 +532,7 @@ new SelectionPrompt<string>()
 #endregion
 #endregion
 #region Ability
-else if (gamemode == "Abilitky")
+else if (gamemode == "Ability guesser")
 {
     Random generatorCisel = new ();
     nahodnyindex = generatorCisel.Next(abilities.Length);
@@ -1048,7 +1046,7 @@ else if (gamemode == "Abilitky")
 #region Agentprep
     while(true)
     {
-        AnsiConsole.Markup($"[Red1]VALDLE![/]");
+        AnsiConsole.Markup($"[Red1]               VALDLE![/]");
         Console.WriteLine("");
     Agents:
         choice = AnsiConsole.Prompt(
@@ -1876,6 +1874,8 @@ new SelectionPrompt<string>()
 #endregion
 else if (gamemode == "Streak")
     {
+    AnsiConsole.Markup($"[Red1]               VALDLE![/]");
+    Console.WriteLine("");
 
         if (File.Exists("streak.txt") && File.Exists("datum.txt"))
         {
