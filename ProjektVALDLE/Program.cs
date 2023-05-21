@@ -107,148 +107,148 @@ if (gamemode == "Agent guesser")
     {
         releaseDate = "Beta";
         role = "Duelist";
-        Narodnost = "Jižní Korea";
-        gender = "žena";
+        Narodnost = "South Korea";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Raze")
     {
         releaseDate = "1.0";
         role = "Duelist";
-        Narodnost = "Brazílie";
-        gender = "žena";
+        Narodnost = "Brazil";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Reyna")
     {
         releaseDate = "1.0";
         role = "Duelist";
         Narodnost = "Mexico";
-        gender = "žena";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Neon")
     {
         releaseDate = "4.0";
         role = "Duelist";
-        Narodnost = "Filipíny";
-        gender = "žena";
+        Narodnost = "Philippines";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Phoenix")
     {
         releaseDate = "Beta";
         role = "Duelist";
-        Narodnost = "Británie";
-        gender = "muž";
+        Narodnost = "GB";
+        gender = "Male";
     }
     else if (hadanyAgent == "Yoru")
     {
         releaseDate = "2.0";
         role = "Duelist";
-        Narodnost = "Japonsko";
-        gender = "muž";
+        Narodnost = "Japan";
+        gender = "Male";
     }
     else if (hadanyAgent == "Gekko")
     {
         releaseDate = "6.04";
         role = "Initiator";
         Narodnost = "USA";
-        gender = "muž";
+        gender = "Male";
     }
     else if (hadanyAgent == "Sova")
     {
         releaseDate = "Beta";
         role = "Initiator";
-        Narodnost = "Rusko";
-        gender = "muž";
+        Narodnost = "Russsia";
+        gender = "Male";
     }
     else if (hadanyAgent == "Fade")
     {
         releaseDate = "4.08";
         role = "Initiator";
-        Narodnost = "Turecko";
-        gender = "žena";
+        Narodnost = "Turkey";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Kayo")
     {
         releaseDate = "3.0";
         role = "Initiator";
         Narodnost = "Alternative Earth";
-        gender = "muž";
+        gender = "Male";
     }
     else if (hadanyAgent == "Skye")
     {
         releaseDate = "1.11";
         role = "Initiator";
-        Narodnost = "Austrálie";
-        gender = "žena";
+        Narodnost = "Australia";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Breach")
     {
         releaseDate = "Beta";
         role = "Initiator";
-        Narodnost = "Švédsko";
-        gender = "muž";
+        Narodnost = "Sweden";
+        gender = "Male";
     }
     else if (hadanyAgent == "Cypher")
     {
         releaseDate = "Beta";
         role = "Sentinel";
-        Narodnost = "Maroko";
-        gender = "muž";
+        Narodnost = "Morocco";
+        gender = "Male";
     }
     else if (hadanyAgent == "Sage")
     {
         releaseDate = "Beta";
         role = "Sentinel";
-        Narodnost = "Čína";
-        gender = "žena";
+        Narodnost = "China";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Killjoy")
     {
         releaseDate = "1.05";
         role = "Sentinel";
-        Narodnost = "Německo";
-        gender = "žena";
+        Narodnost = "Germany";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Chamber")
     {
         releaseDate = "3.10";
         role = "Sentinel";
-        Narodnost = "Francie";
-        gender = "muž";
+        Narodnost = "France";
+        gender = "Male";
     }
     else if (hadanyAgent == "Omen")
     {
         releaseDate = "Beta";
         role = "Controller";
         Narodnost = "Unknown";
-        gender = "muž";
+        gender = "Male";
     }
     else if (hadanyAgent == "Viper")
     {
         releaseDate = "Beta";
         role = "Controller";
         Narodnost = "USA";
-        gender = "žena";
+        gender = "Woman";
     }
     else if (hadanyAgent == "Harbor")
     {
         releaseDate = "5.08";
         role = "Controller";
-        Narodnost = "Indie";
-        gender = "muž";
+        Narodnost = "India";
+        gender = "Male";
     }
     else if (hadanyAgent == "Brimstone")
     {
         releaseDate = "Beta";
         role = "Controller";
         Narodnost = "USA";
-        gender = "muž";
+        gender = "Male";
     }
     else if (hadanyAgent == "Astra")
     {
         releaseDate = "2.04";
         role = "Controller";
         Narodnost = "Ghana";
-        gender = "žena";
+        gender = "Woman";
     }
 
     #region AgentGuesser
@@ -258,7 +258,7 @@ if (gamemode == "Agent guesser")
         Console.WriteLine("");
         string odhadAgenta = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Tvuj guess?")
+.Title("Your guess?")
 .PageSize(10)
 .HighlightStyle(highlightColor)
 .AddChoices(new[] {
@@ -270,205 +270,173 @@ new SelectionPrompt<string>()
         {
             GreleaseDate = "Beta";
             Grole = "Duelist";
-            GNarodnost = "Jižní Korea";
-            Ggender = "žena";
+            GNarodnost = "South Korea";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Raze")
         {
             GreleaseDate = "1.0";
             Grole = "Duelist";
-            GNarodnost = "Brazílie";
-            Ggender = "žena";
+            GNarodnost = "Brazil";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Reyna")
         {
             GreleaseDate = "1.0";
             Grole = "Duelist";
             GNarodnost = "Mexico";
-            Ggender = "žena";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Neon")
         {
             GreleaseDate = "4.0";
             Grole = "Duelist";
-            GNarodnost = "Filipíny";
-            Ggender = "žena";
+            GNarodnost = "Philippines";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Phoenix")
         {
             GreleaseDate = "Beta";
             Grole = "Duelist";
-            GNarodnost = "Británie";
-            Ggender = "muž";
+            GNarodnost = "GB";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Yoru")
         {
             GreleaseDate = "2.0";
             Grole = "Duelist";
-            GNarodnost = "Japonsko";
-            Ggender = "muž";
+            GNarodnost = "Japan";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Gekko")
         {
             GreleaseDate = "6.04";
             Grole = "Initiator";
             GNarodnost = "USA";
-            Ggender = "muž";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Sova")
         {
             GreleaseDate = "Beta";
             Grole = "Initiator";
-            GNarodnost = "Rusko";
-            Ggender = "muž";
+            GNarodnost = "Russia";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Fade")
         {
             GreleaseDate = "4.08";
             Grole = "Initiator";
-            GNarodnost = "Turecko";
-            Ggender = "žena";
+            GNarodnost = "Turkey";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Kayo")
         {
             GreleaseDate = "3.0";
             Grole = "Initiator";
             GNarodnost = "Alternative Earth";
-            Ggender = "muž";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Skye")
         {
             GreleaseDate = "1.11";
             Grole = "Initiator";
-            GNarodnost = "Austrálie";
-            Ggender = "žena";
+            GNarodnost = "Australia";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Breach")
         {
             GreleaseDate = "Beta";
             Grole = "Initiator";
-            GNarodnost = "Švédsko";
-            Ggender = "muž";
+            GNarodnost = "Sweden";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Cypher")
         {
             GreleaseDate = "Beta";
             Grole = "Sentinel";
-            GNarodnost = "Maroko";
-            Ggender = "muž";
+            GNarodnost = "Morocco";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Sage")
         {
             GreleaseDate = "Beta";
             Grole = "Sentinel";
-            GNarodnost = "Čína";
-            Ggender = "žena";
+            GNarodnost = "China";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Killjoy")
         {
             GreleaseDate = "1.05";
             Grole = "Sentinel";
-            GNarodnost = "Německo";
-            Ggender = "žena";
+            GNarodnost = "Germany";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Chamber")
         {
             GreleaseDate = "3.10";
             Grole = "Sentinel";
-            GNarodnost = "Francie";
-            Ggender = "muž";
+            GNarodnost = "France";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Omen")
         {
             GreleaseDate = "Beta";
             Grole = "Controller";
             GNarodnost = "Unknown";
-            Ggender = "muž";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Viper")
         {
             GreleaseDate = "Beta";
             Grole = "Controller";
             GNarodnost = "USA";
-            Ggender = "žena";
+            Ggender = "Woman";
         }
         else if (odhadAgenta == "Harbor")
         {
             GreleaseDate = "5.08";
             Grole = "Controller";
-            GNarodnost = "Indie";
-            Ggender = "muž";
+            GNarodnost = "India";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Brimstone")
         {
             GreleaseDate = "Beta";
             Grole = "Controller";
             GNarodnost = "USA";
-            Ggender = "muž";
+            Ggender = "Male";
         }
         else if (odhadAgenta == "Astra")
         {
             GreleaseDate = "2.04";
             Grole = "Controller";
             GNarodnost = "Ghana";
-            Ggender = "žena";
+            Ggender = "Woman";
         }
         if (odhadAgenta == hadanyAgent)
         {
-            if (releaseDate == GreleaseDate)
-            {
                 AnsiConsole.Markup($"[Lime]Release date {GreleaseDate}[/]");
                 Console.WriteLine("");
-            }
-            else
-            {
-                AnsiConsole.Markup($"[Red1]Release date {GreleaseDate}[/]");
-                Console.WriteLine("");
-            }
-            Thread.Sleep(100);
-            if (role == Grole)
-            {
+                Thread.Sleep(100);
                 AnsiConsole.Markup($"[Lime]Role {Grole}[/]");
                 Console.WriteLine("");
-            }
-            else
-            {
-                AnsiConsole.Markup($"[Red1]Role {Grole}[/]");
+                Thread.Sleep(100);
+                AnsiConsole.Markup($"[Lime]Nationality {GNarodnost}[/]");
                 Console.WriteLine("");
-            }
-            Thread.Sleep(100);
-            if (Narodnost == GNarodnost)
-            {
-                AnsiConsole.Markup($"[Lime]Národnost {GNarodnost}[/]");
+                Thread.Sleep(100);
+                AnsiConsole.Markup($"[Lime]Gender {Ggender}[/]");
                 Console.WriteLine("");
-            }
-            else
-            {
-                AnsiConsole.Markup($"[Red1]Národnost {GNarodnost}[/]");
-                Console.WriteLine("");
-            }
-            Thread.Sleep(100);
-            if (gender == Ggender)
-            {
-                AnsiConsole.Markup($"[Lime]Pohlaví {Ggender}[/]");
-                Console.WriteLine("");
-            }
-            else
-            {
-                AnsiConsole.Markup($"[Red1]Pohlaví {Ggender}[/]");
-                Console.WriteLine("");
-            }
-            Console.ForegroundColor = ConsoleColor.White;
-            Thread.Sleep(1000);
-            choice = AnsiConsole.Prompt(
+                Console.ForegroundColor = ConsoleColor.White;
+                Thread.Sleep(1000);
+                choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("GG!")
                     .PageSize(10)
                     .HighlightStyle(highlightColor)
                     .AddChoices(new[] {
-           "Menu", "Exit"
+                "Menu", "Exit"
                     }));
-            Console.Clear();
+                Console.Clear();
             if (choice == "Menu")
             {
                 goto Menu;
@@ -504,23 +472,23 @@ new SelectionPrompt<string>()
             Thread.Sleep(100);
             if (Narodnost == GNarodnost)
             {
-                AnsiConsole.Markup($"[Lime]Národnost {GNarodnost}[/]");
+                AnsiConsole.Markup($"[Lime]Nationality {GNarodnost}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Národnost {GNarodnost}[/]");
+                AnsiConsole.Markup($"[Red1]Nationality {GNarodnost}[/]");
                 Console.WriteLine("");
             }
             Thread.Sleep(100);
             if (gender == Ggender)
             {
-                AnsiConsole.Markup($"[Lime]Pohlaví {Ggender}[/]");
+                AnsiConsole.Markup($"[Lime]Gender {Ggender}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Pohlaví {Ggender}[/]");
+                AnsiConsole.Markup($"[Red1]Gender {Ggender}[/]");
                 Console.WriteLine("");
             }
             Console.ReadKey();
@@ -1051,7 +1019,7 @@ else if (gamemode == "Ability guesser")
     Agents:
         choice = AnsiConsole.Prompt(
     new SelectionPrompt<string>()
-        .Title("Tvuj guess?")
+        .Title("Your guess?")
         .PageSize(10)
         .HighlightStyle(highlightColor)
         .AddChoices(new[] {
@@ -1063,7 +1031,7 @@ else if (gamemode == "Ability guesser")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Jett)
 .AddChoices(new[] {
@@ -1074,7 +1042,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Raze)
 .AddChoices(new[] {
@@ -1085,7 +1053,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Reyna)
 .AddChoices(new[] {
@@ -1096,7 +1064,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Neon)
 .AddChoices(new[] {
@@ -1107,7 +1075,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Phoenix)
 .AddChoices(new[] {
@@ -1118,7 +1086,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Yoru)
 .AddChoices(new[] {
@@ -1129,7 +1097,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Gekko)
 .AddChoices(new[] {
@@ -1140,7 +1108,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Sova)
 .AddChoices(new[] {
@@ -1151,7 +1119,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Fade)
 .AddChoices(new[] {
@@ -1162,7 +1130,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Kayo)
 .AddChoices(new[] {
@@ -1173,7 +1141,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Skye)
 .AddChoices(new[] {
@@ -1184,7 +1152,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Breach)
 .AddChoices(new[] {
@@ -1195,7 +1163,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Cypher)
 .AddChoices(new[] {
@@ -1206,7 +1174,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Sage)
 .AddChoices(new[] {
@@ -1217,7 +1185,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Killjoy)
 .AddChoices(new[] {
@@ -1228,7 +1196,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Chamber)
 .AddChoices(new[] {
@@ -1239,7 +1207,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Omen)
 .AddChoices(new[] {
@@ -1250,7 +1218,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Viper)
 .AddChoices(new[] {
@@ -1261,7 +1229,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Harbor)
 .AddChoices(new[] {
@@ -1272,7 +1240,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Brimstone)
 .AddChoices(new[] {
@@ -1283,7 +1251,7 @@ new SelectionPrompt<string>()
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
-.Title("Chceš hádat agenty nebo abilitky?")
+.Title("Ability?")
 .PageSize(10)
 .HighlightStyle(Astra)
 .AddChoices(new[] {
@@ -1806,13 +1774,13 @@ new SelectionPrompt<string>()
         #region AbilityGuesser
         if (odhadAbility == hadanaAbilita)
         {
-            AnsiConsole.Markup($"[Lime]Typ {GAbilityType}[/]");
+            AnsiConsole.Markup($"[Lime]Type {GAbilityType}[/]");
             Console.WriteLine("");
             Thread.Sleep(100);
             AnsiConsole.Markup($"[Lime]Button {GAbilityBtn}[/]");
             Console.WriteLine("");
             Thread.Sleep(100);
-            AnsiConsole.Markup($"[Lime]Cena {GAbilityCost}[/]");
+            AnsiConsole.Markup($"[Lime]Cost {GAbilityCost}[/]");
             Console.WriteLine("");
             choice = AnsiConsole.Prompt(
         new SelectionPrompt<string>()
@@ -1836,12 +1804,12 @@ new SelectionPrompt<string>()
         {
             if(AbilityType == GAbilityType)
             {
-                AnsiConsole.Markup($"[Lime]Typ {GAbilityType}[/]");
+                AnsiConsole.Markup($"[Lime]Type {GAbilityType}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Typ {GAbilityType}[/]");
+                AnsiConsole.Markup($"[Red1]Type {GAbilityType}[/]");
                 Console.WriteLine("");
             }
             if(AbilityBtn == GAbilityBtn)
@@ -1857,12 +1825,12 @@ new SelectionPrompt<string>()
             }
             if(AbilityCost== GAbilityCost)
             {
-                AnsiConsole.Markup($"[Lime]Cena {GAbilityCost}[/]");
+                AnsiConsole.Markup($"[Lime]Cost {GAbilityCost}[/]");
                 Console.WriteLine("");
             }
             else
             {
-                AnsiConsole.Markup($"[Red1]Cena {GAbilityCost}[/]");
+                AnsiConsole.Markup($"[Red1]Cost {GAbilityCost}[/]");
                 Console.WriteLine("");
             }
             Console.ReadKey();
@@ -1882,11 +1850,11 @@ else if (gamemode == "Streak")
 
         string prectenyStreak = File.ReadAllText("streak.txt");
 
-            AnsiConsole.Markup($"[purple_2]Tvuj momentální streak je {prectenyStreak}![/]");
+            AnsiConsole.Markup($"[purple_2]Your current streak is {prectenyStreak}![/]");
         }
         Console.ReadKey();
         goto Menu;
 
    }
 exit:
-Console.WriteLine("To bylo moc ez.... Myslim že je čas nerfnout Chambera.");
+Console.WriteLine("That was too easy..... I think its time to nerf Chamber.");
