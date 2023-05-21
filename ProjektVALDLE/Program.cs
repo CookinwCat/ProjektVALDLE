@@ -32,7 +32,7 @@ DateTime prectenyCas = DateTime.Parse(precteneDatum);
 
 if(!File.Exists("streak.txt"))
 {
-    File.WriteAllText("streak.txt", "0");
+    File.WriteAllText("streak.txt", "1");
 }
 
 if(den >= prectenyCas.Day + 2)
@@ -45,6 +45,10 @@ else if(den != prectenyCas.Day)
     int streacik = Convert.ToInt32(obsahTxt);
     streacik++;
     File.WriteAllText("streak.txt", streacik.ToString());
+}
+else if(den == prectenyCas.Day)
+{
+    Console.WriteLine("You already played today");
 }
 
 string releaseDate = "";
