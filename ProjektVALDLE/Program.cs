@@ -25,6 +25,7 @@ var Brimstone = new Style().Foreground(Color.OrangeRed1);
 
 DateTime time = DateTime.Now;
 int den = time.Day;
+
 File.WriteAllText("datum.txt", time.ToString());
 string precteneDatum = File.ReadAllText("datum.txt");
 DateTime prectenyCas = DateTime.Parse(precteneDatum);
