@@ -39,14 +39,14 @@ if(den >= prectenyCas.Day + 2)
 {
     File.WriteAllText("streak.txt", "0");
 }
-else if(den != prectenyCas.Day)
+if(den != prectenyCas.Day)
 { 
     string obsahTxt = File.ReadAllText("streak.txt");
     int streacik = Convert.ToInt32(obsahTxt);
     streacik++;
     File.WriteAllText("streak.txt", streacik.ToString());
 }
-else if(den == prectenyCas.Day)
+if(den == prectenyCas.Day)
 {
     Console.WriteLine("Kys nigga");
 }
