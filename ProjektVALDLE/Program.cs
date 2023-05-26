@@ -26,15 +26,14 @@ var Brimstone = new Style().Foreground(Color.OrangeRed1);
 DateTime time = DateTime.Now;
 int den = time.Day;
 
-File.WriteAllText("datum.txt", time.ToString());
 string precteneDatum = File.ReadAllText("datum.txt");
+File.WriteAllText("datum.txt", time.ToString());
 DateTime prectenyCas = DateTime.Parse(precteneDatum);
 
 if(!File.Exists("streak.txt"))
 {
     File.WriteAllText("streak.txt", "1");
 }
-
 if(den >= prectenyCas.Day + 2)
 {
     File.WriteAllText("streak.txt", "0");
