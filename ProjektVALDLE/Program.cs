@@ -48,7 +48,7 @@ else if(den != prectenyCas.Day)
 }
 else if(den == prectenyCas.Day)
 {
-    Console.WriteLine("You already played today");
+    Console.WriteLine("Kys nigga");
 }
 File.WriteAllText("datum.txt", time.ToString());
 
@@ -269,7 +269,7 @@ new SelectionPrompt<string>()
 .AddChoices(new[] {
            "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
     "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
-    "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra",
+    "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra", "Menu"
 }));
         if (odhadAgenta == "Jett")
         {
@@ -417,6 +417,10 @@ new SelectionPrompt<string>()
             Grole = "Controller";
             GNarodnost = "Ghana";
             Ggender = "Woman";
+        }
+        else if (odhadAgenta == "Menu")
+        {
+            goto Menu;
         }
         if (odhadAgenta == hadanyAgent)
         {
@@ -1030,7 +1034,7 @@ else if (gamemode == "Ability guesser")
         .AddChoices(new[] {
            "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
     "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
-    "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra",
+    "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra", "Menu"
         }));
         if (choice == "Jett")
         {
@@ -1262,6 +1266,10 @@ new SelectionPrompt<string>()
 .AddChoices(new[] {
            "Nova pulse","Nebula", "Gravity well", "Cosmic divide", "Zpátky"
 }));
+        }
+        else if(choice == "Menu")
+        {
+            goto Menu;
         }
         #endregion
 
