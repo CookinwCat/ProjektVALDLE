@@ -22,10 +22,15 @@ var Omen = new Style().Foreground(Color.Blue);
 var Viper = new Style().Foreground(Color.Green4);
 var Harbor = new Style().Foreground(Color.DeepSkyBlue3);
 var Brimstone = new Style().Foreground(Color.OrangeRed1);
+var Deadlock = new Style().Foreground(Color.RoyalBlue1);
 
 DateTime time = DateTime.Now;
 int den = time.Day;
 
+if(!File.Exists("datum.txt"))
+{
+    File.WriteAllText("datum.txt", time.ToString());
+}
 string precteneDatum = File.ReadAllText("datum.txt");
 File.WriteAllText("datum.txt", time.ToString());
 DateTime prectenyCas = DateTime.Parse(precteneDatum);
@@ -72,7 +77,7 @@ int AbilityCost = 0;
 int GAbilityCost = 0;
 
 string[] agents = {"Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
-    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
+    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher","Deadlock", "Sage", "Killjoy",
     "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra"};
 string[] abilities = {"Incendiary", "Sky smoke", "Stim beacon", "Orbital strike", "Curveball", "Hot hands", "Blaze", "Run it back", "Slow orb", "Healing orb",
     "Barrier orb", "Resurrection", "Shock bolt", "Recon bolt", "Owl drone", "Hunter´s fury", "Poison cloud", "Toxic screen", "Snake bite", "Viper´s pit",
@@ -254,6 +259,13 @@ if (gamemode == "Agent guesser")
         Narodnost = "Ghana";
         gender = "Woman";
     }
+    else if (hadanyAgent == "Deadlock")
+    {
+        releaseDate = "7.0";
+        role = "Sentinel";
+        Narodnost = "Norway";
+        gender = "Woman";
+    }
 
     #region AgentGuesser
     while (true)
@@ -267,7 +279,7 @@ new SelectionPrompt<string>()
 .HighlightStyle(highlightColor)
 .AddChoices(new[] {
            "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
-    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
+    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher","Deadlock", "Sage", "Killjoy",
     "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra", "Menu"
 }));
         if (odhadAgenta == "Jett")
@@ -415,6 +427,13 @@ new SelectionPrompt<string>()
             GreleaseDate = "2.04";
             Grole = "Controller";
             GNarodnost = "Ghana";
+            Ggender = "Woman";
+        }
+        else if (odhadAgenta == "Deadlock")
+        {
+            GreleaseDate = "7.0";
+            Grole = "Sentinel";
+            GNarodnost = "Norway";
             Ggender = "Woman";
         }
         else if (odhadAgenta == "Menu")
@@ -576,7 +595,7 @@ else if (gamemode == "Ability guesser")
     }
     else if (hadanaAbilita == "Barrier orb")
     {
-        AbilityType = "Smoke/Vision block";
+        AbilityType = "Movement block";
         AbilityBtn = "C";
         AbilityCost = 400;
     }
@@ -1018,9 +1037,33 @@ else if (gamemode == "Ability guesser")
         AbilityBtn = "X";
         AbilityCost = 7;
     }
+    else if (hadanaAbilita == "GravNet")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "C";
+        AbilityCost = 200;
+    }
+    else if (hadanaAbilita == "Sonic Sensor")
+    {
+        AbilityType = "Stun/Debuff";
+        AbilityBtn = "Q";
+        AbilityCost = 200;
+    }
+    else if (hadanaAbilita == "Barrier Mesh")
+    {
+        AbilityType = "Movement block";
+        AbilityBtn = "E";
+        AbilityCost = 0;
+    }
+    else if (hadanaAbilita == "Annihilation")
+    {
+        AbilityType = "Molly/Dmg dealing";
+        AbilityBtn = "X";
+        AbilityCost = 7;
+    }
 
-#region Agentprep
-    while(true)
+    #region Agentprep
+    while (true)
     {
         AnsiConsole.Markup($"[Red1]               VALDLE![/]");
         Console.WriteLine("");
@@ -1032,7 +1075,7 @@ else if (gamemode == "Ability guesser")
         .HighlightStyle(highlightColor)
         .AddChoices(new[] {
            "Jett","Raze", "Reyna", "Neon", "Phoenix", "Yoru", "Gekko",
-    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher", "Sage", "Killjoy",
+    "Sova", "Fade", "Kayo","Skye", "Breach", "Cypher","Deadlock", "Sage", "Killjoy",
     "Chamber", "Omen", "Viper", "Harbor", "Brimstone", "Astra", "Menu"
         }));
         if (choice == "Jett")
@@ -1046,7 +1089,7 @@ new SelectionPrompt<string>()
            "Updraft","Dash", "Cloudburst", "Blade storm", "Zpátky"
 }));
         }
-        else if(choice == "Raze")
+        else if (choice == "Raze")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1057,7 +1100,7 @@ new SelectionPrompt<string>()
            "Blast pack","Paint shells", "Boom bot", "Showstopper", "Zpátky"
 }));
         }
-        else if(choice == "Reyna")
+        else if (choice == "Reyna")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1068,7 +1111,7 @@ new SelectionPrompt<string>()
            "Devour","Dismiss", "Leer", "Empress", "Zpátky"
 }));
         }
-        else if(choice == "Neon")
+        else if (choice == "Neon")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1079,7 +1122,7 @@ new SelectionPrompt<string>()
            "Relay bolt","High gear", "Fast lane", "Overdrive", "Zpátky"
 }));
         }
-        else if(choice == "Phoenix")
+        else if (choice == "Phoenix")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1090,7 +1133,7 @@ new SelectionPrompt<string>()
            "Curveball","Hot hands", "Blaze", "Run it back", "Zpátky"
 }));
         }
-        else if(choice == "Yoru")
+        else if (choice == "Yoru")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1101,7 +1144,7 @@ new SelectionPrompt<string>()
            "Blindside","Gatecrash", "Fakeout", "Dimensional drift", "Zpátky"
 }));
         }
-        else if(choice == "Gekko")
+        else if (choice == "Gekko")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1123,7 +1166,7 @@ new SelectionPrompt<string>()
            "Shock bolt","Recon bolt", "Owl drone", "Hunter´s fury", "Zpátky"
 }));
         }
-        else if(choice == "Fade")
+        else if (choice == "Fade")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1134,7 +1177,7 @@ new SelectionPrompt<string>()
            "Seize","Haunt", "Prowler", "Nightfall", "Zpátky"
 }));
         }
-        else if(choice == "Kayo")
+        else if (choice == "Kayo")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1145,7 +1188,7 @@ new SelectionPrompt<string>()
            "Flash/Drive","Zero/Point", "Frag/Ment", "Null/Cmd", "Zpátky"
 }));
         }
-        else if(choice == "Skye")
+        else if (choice == "Skye")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1156,7 +1199,7 @@ new SelectionPrompt<string>()
            "Trailblazer","Guiding light", "Regrowth", "Seekers", "Zpátky"
 }));
         }
-        else if(choice == "Breach")
+        else if (choice == "Breach")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1167,7 +1210,7 @@ new SelectionPrompt<string>()
            "Flashpoint","Fault line", "Aftershock", "Rolling thunder", "Zpátky"
 }));
         }
-        else if(choice == "Cypher")
+        else if (choice == "Cypher")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1178,7 +1221,18 @@ new SelectionPrompt<string>()
            "Cyber cage","Spycam", "Trapwire", "Neural theft", "Zpátky"
 }));
         }
-        else if(choice == "Sage")
+        else if (choice == "Deadlock")
+        {
+            odhadAbility = AnsiConsole.Prompt(
+new SelectionPrompt<string>()
+.Title("Ability?")
+.PageSize(10)
+.HighlightStyle(Deadlock)
+.AddChoices(new[] {
+           "GravNet","Sonic Sensor", "Barrier Mesh", "Annihilation", "Zpátky"
+}));
+        }
+        else if (choice == "Sage")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1189,7 +1243,7 @@ new SelectionPrompt<string>()
            "Slow orb","Healing orb", "Barrier orb", "Resurrection", "Zpátky"
 }));
         }
-        else if(choice == "Killjoy")
+        else if (choice == "Killjoy")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1200,7 +1254,7 @@ new SelectionPrompt<string>()
            "Alarmbot","Turret", "Nanoswarm", "Lockdown", "Zpátky"
 }));
         }
-        else if(choice == "Chamber")
+        else if (choice == "Chamber")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1211,7 +1265,7 @@ new SelectionPrompt<string>()
            "Headhunter","Rendezvous", "Trademark", "Tour de force", "Zpátky"
 }));
         }
-        else if(choice == "Omen")
+        else if (choice == "Omen")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1222,7 +1276,7 @@ new SelectionPrompt<string>()
            "Paranoia","Dark cover", "Shrouded step", "From the shadows", "Zpátky"
 }));
         }
-        else if(choice =="Viper")
+        else if (choice == "Viper")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1233,7 +1287,7 @@ new SelectionPrompt<string>()
            "Poison cloud","Toxic screen", "Snake bite", "Viper´s pit", "Zpátky"
 }));
         }
-        else if(choice == "Harbor")
+        else if (choice == "Harbor")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1244,7 +1298,7 @@ new SelectionPrompt<string>()
            "Cove","High tide", "Cascade", "Reckoning", "Zpátky"
 }));
         }
-        else if(choice == "Brimstone")
+        else if (choice == "Brimstone")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1255,7 +1309,7 @@ new SelectionPrompt<string>()
            "Incendiary","Sky smoke", "Stim beacon", "Orbital strike", "Zpátky"
 }));
         }
-        else if(choice == "Astra")
+        else if (choice == "Astra")
         {
             odhadAbility = AnsiConsole.Prompt(
 new SelectionPrompt<string>()
@@ -1266,7 +1320,7 @@ new SelectionPrompt<string>()
            "Nova pulse","Nebula", "Gravity well", "Cosmic divide", "Zpátky"
 }));
         }
-        else if(choice == "Menu")
+        else if (choice == "Menu")
         {
             goto Menu;
         }
@@ -1772,9 +1826,34 @@ new SelectionPrompt<string>()
             GAbilityBtn = "C";
             GAbilityCost = 250;
         }
+
         else if (odhadAbility == "Thrash")
         {
             GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "X";
+            GAbilityCost = 7;
+        }
+        else if (odhadAbility == "GravNet")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "C";
+            GAbilityCost = 200;
+        }
+        else if (odhadAbility == "Sonic Sensor")
+        {
+            GAbilityType = "Stun/Debuff";
+            GAbilityBtn = "Q";
+            GAbilityCost = 200;
+        }
+        else if (odhadAbility == "Barrier Mesh")
+        {
+            GAbilityType = "Movement block";
+            GAbilityBtn = "E";
+            GAbilityCost = 0;
+        }
+        else if (odhadAbility == "Annihilation")
+        {
+            GAbilityType = "Molly/Dmg dealing";
             GAbilityBtn = "X";
             GAbilityCost = 7;
         }
