@@ -1085,7 +1085,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Jett)
 .AddChoices(new[] {
-           "Updraft","Dash", "Cloudburst", "Blade storm", "Zpátky"
+           "Updraft","Dash", "Cloudburst", "Blade storm", "Back"
 }));
         }
         else if (choice == "Raze")
@@ -1096,7 +1096,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Raze)
 .AddChoices(new[] {
-           "Blast pack","Paint shells", "Boom bot", "Showstopper", "Zpátky"
+           "Blast pack","Paint shells", "Boom bot", "Showstopper", "Back"
 }));
         }
         else if (choice == "Reyna")
@@ -1107,7 +1107,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Reyna)
 .AddChoices(new[] {
-           "Devour","Dismiss", "Leer", "Empress", "Zpátky"
+           "Devour","Dismiss", "Leer", "Empress", "Back"
 }));
         }
         else if (choice == "Neon")
@@ -1118,7 +1118,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Neon)
 .AddChoices(new[] {
-           "Relay bolt","High gear", "Fast lane", "Overdrive", "Zpátky"
+           "Relay bolt","High gear", "Fast lane", "Overdrive", "Back"
 }));
         }
         else if (choice == "Phoenix")
@@ -1129,7 +1129,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Phoenix)
 .AddChoices(new[] {
-           "Curveball","Hot hands", "Blaze", "Run it back", "Zpátky"
+           "Curveball","Hot hands", "Blaze", "Run it back", "Back"
 }));
         }
         else if (choice == "Yoru")
@@ -1140,7 +1140,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Yoru)
 .AddChoices(new[] {
-           "Blindside","Gatecrash", "Fakeout", "Dimensional drift", "Zpátky"
+           "Blindside","Gatecrash", "Fakeout", "Dimensional drift", "Back"
 }));
         }
         else if (choice == "Gekko")
@@ -1151,7 +1151,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Gekko)
 .AddChoices(new[] {
-           "Wingman","Dizzy", "Moshpit", "Thrash", "Zpátky"
+           "Wingman","Dizzy", "Moshpit", "Thrash", "Back"
 }));
         }
         else if (choice == "Sova")
@@ -1162,7 +1162,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Sova)
 .AddChoices(new[] {
-           "Shock bolt","Recon bolt", "Owl drone", "Hunter´s fury", "Zpátky"
+           "Shock bolt","Recon bolt", "Owl drone", "Hunter´s fury", "Back"
 }));
         }
         else if (choice == "Fade")
@@ -1173,7 +1173,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Fade)
 .AddChoices(new[] {
-           "Seize","Haunt", "Prowler", "Nightfall", "Zpátky"
+           "Seize","Haunt", "Prowler", "Nightfall", "Back"
 }));
         }
         else if (choice == "Kayo")
@@ -1184,7 +1184,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Kayo)
 .AddChoices(new[] {
-           "Flash/Drive","Zero/Point", "Frag/Ment", "Null/Cmd", "Zpátky"
+           "Flash/Drive","Zero/Point", "Frag/Ment", "Null/Cmd", "Back"
 }));
         }
         else if (choice == "Skye")
@@ -1195,7 +1195,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Skye)
 .AddChoices(new[] {
-           "Trailblazer","Guiding light", "Regrowth", "Seekers", "Zpátky"
+           "Trailblazer","Guiding light", "Regrowth", "Seekers", "Back"
 }));
         }
         else if (choice == "Breach")
@@ -1206,7 +1206,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Breach)
 .AddChoices(new[] {
-           "Flashpoint","Fault line", "Aftershock", "Rolling thunder", "Zpátky"
+           "Flashpoint","Fault line", "Aftershock", "Rolling thunder", "Back"
 }));
         }
         else if (choice == "Cypher")
@@ -1217,7 +1217,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Cypher)
 .AddChoices(new[] {
-           "Cyber cage","Spycam", "Trapwire", "Neural theft", "Zpátky"
+           "Cyber cage","Spycam", "Trapwire", "Neural theft", "Back"
 }));
         }
         else if (choice == "Deadlock")
@@ -1228,7 +1228,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Deadlock)
 .AddChoices(new[] {
-           "Sonic Sensor", "Barrier Mesh", "GravNet", "Annihilation", "Zpátky"
+           "Sonic Sensor", "Barrier Mesh", "GravNet", "Annihilation", "Back"
 }));
         }
         else if (choice == "Sage")
@@ -1239,7 +1239,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Sage)
 .AddChoices(new[] {
-           "Slow orb","Healing orb", "Barrier orb", "Resurrection", "Zpátky"
+           "Slow orb","Healing orb", "Barrier orb", "Resurrection", "Back"
 }));
         }
         else if (choice == "Killjoy")
@@ -1250,7 +1250,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Killjoy)
 .AddChoices(new[] {
-           "Alarmbot","Turret", "Nanoswarm", "Lockdown", "Zpátky"
+           "Alarmbot","Turret", "Nanoswarm", "Lockdown", "Back"
 }));
         }
         else if (choice == "Chamber")
@@ -1261,7 +1261,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Chamber)
 .AddChoices(new[] {
-           "Headhunter","Rendezvous", "Trademark", "Tour de force", "Zpátky"
+           "Headhunter","Rendezvous", "Trademark", "Tour de force", "Back"
 }));
         }
         else if (choice == "Omen")
@@ -1272,7 +1272,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Omen)
 .AddChoices(new[] {
-           "Paranoia","Dark cover", "Shrouded step", "From the shadows", "Zpátky"
+           "Paranoia","Dark cover", "Shrouded step", "From the shadows", "Back"
 }));
         }
         else if (choice == "Viper")
@@ -1283,7 +1283,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Viper)
 .AddChoices(new[] {
-           "Poison cloud","Toxic screen", "Snake bite", "Viper´s pit", "Zpátky"
+           "Poison cloud","Toxic screen", "Snake bite", "Viper´s pit", "Back"
 }));
         }
         else if (choice == "Harbor")
@@ -1294,7 +1294,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Harbor)
 .AddChoices(new[] {
-           "Cove","High tide", "Cascade", "Reckoning", "Zpátky"
+           "Cove","High tide", "Cascade", "Reckoning", "Back"
 }));
         }
         else if (choice == "Brimstone")
@@ -1305,7 +1305,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Brimstone)
 .AddChoices(new[] {
-           "Incendiary","Sky smoke", "Stim beacon", "Orbital strike", "Zpátky"
+           "Incendiary","Sky smoke", "Stim beacon", "Orbital strike", "Back"
 }));
         }
         else if (choice == "Astra")
@@ -1316,8 +1316,9 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Astra)
 .AddChoices(new[] {
-           "Nova pulse","Nebula", "Gravity well", "Cosmic divide", "Zpátky"
+           "Nova pulse","Nebula", "Gravity well", "Cosmic divide", "Back"
 }));
+            
         }
         else if (choice == "Menu")
         {
@@ -1856,7 +1857,7 @@ new SelectionPrompt<string>()
             GAbilityBtn = "X";
             GAbilityCost = 7;
         }
-        else if (odhadAbility == "Zpátky")
+        else if (odhadAbility == "Back")
         {
             goto Agents;
         }
