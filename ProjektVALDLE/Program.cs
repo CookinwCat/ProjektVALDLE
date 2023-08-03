@@ -1061,7 +1061,6 @@ else if (gamemode == "Ability guesser")
         AbilityBtn = "X";
         AbilityCost = 7;
     }
-
     #region Agentprep
     while (true)
     {
@@ -1229,7 +1228,7 @@ new SelectionPrompt<string>()
 .PageSize(10)
 .HighlightStyle(Deadlock)
 .AddChoices(new[] {
-           "GravNet","Sonic Sensor", "Barrier Mesh", "Annihilation", "Zpátky"
+           "Sonic Sensor", "Barrier Mesh", "GravNet", "Annihilation", "Zpátky"
 }));
         }
         else if (choice == "Sage")
